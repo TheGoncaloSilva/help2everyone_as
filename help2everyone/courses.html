@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Help2Everyone</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Help2Everyone">
+<!--
+<meta name="description" content="Unicat project">-->
+<link rel="icon" href="./images/logo.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/courses.css">
+<link rel="stylesheet" type="text/css" href="styles/courses_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<ul class="top_bar_contact_list">
+									<li><div class="question">Tens alguma questão?</div></li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<div>232456765</div>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<div>help2everyone.pap@gmail.com</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a class="navbar-brand" href="./index.html">
+									<img src="./images/shortlogo.ico" class="d-inline-block align-top imgnav Logo_text" alt="Help2Everyone">
+							</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li><a href="index.html">Home</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Sobre
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+											<a class="dropdown-item" href="about.html">Sobre</a>
+											<a class="dropdown-item" href="blog.html">Notícias</a>
+									</li>
+									<li class="active"><a href="courses.html">Eventos</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Registados
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="#">Voluntários</a>
+											<a class="dropdown-item" href="#">Organizações</a>
+									</li>
+									<li><a href="contact.html">Contato</a></li>
+								</ul>
+
+								<!-- Hamburger -->
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="./index.html">Home</a></li>
+				<li class="menu_mm"><a href="./about.html">Sobre</a></li>
+				<li class="menu_mm"><a href="./courses.html">Eventos</a></li>
+				<li class="menu_mm"><a href="./blog.html">Notícias</a></li>
+				<li class='menu_mm'><a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						Registados
+				</a>
+					<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+						<a class='dropdown-item' href='#'>Voluntários</a>
+						<a class='dropdown-item' href='#'>Organizações</a>
+					</div>
+				</li>
+				<li class="menu_mm"><a href="contact.html">Contato</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="breadcrumbs_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="breadcrumbs">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>Eventos</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Courses -->
+
+	<div class="courses">
+		<div class="container">
+			<div class="row">
+
+					<div class="col-lg-8">
+						<div class="container" style="background-color:lightgrey;">
+							<form action="./courses.html" method="POST" id="courses_search_form" class="form-control" style="background-color:lightgrey;">
+								<div class="row text-center" style="background-color:lightgrey;">
+								<div class="col-md-4" style="padding-top:5px;padding-bottom:5px;">
+									<input type="search" class="form-control" name="filtnome" placeholder="Procurar..." required>
+								</div>
+								<div class="col-md-4" style="padding-top:5px;padding-bottom:5px;">
+									<select id="courses_search_select" name="filt_select" class="form-control">
+										<option value="1">Nome</option>
+										<option value="2">Id</option>
+										<option value="3">Pais</option>
+										<option value="4">Distrito</option>
+										<option value="5">Concelho</option>
+										<option value="6">Freguesia</option>
+										<option value="7">Nº de Vagas</option>
+										<option value="8">Duracao</option>
+										<option value="9">Idioma</option>
+										<option value="10">Compromisso</option>
+										<option value="11">Grupo Alvo</option>
+									</select>
+								</div>
+								<div class="col-md-1" style="padding-top:5px;padding-bottom:5px;">
+									<a style="padding-left:10px;" href="./courses.html?limparsel" title="Limpar seleção"><i class="fa fa-refresh fa-2x"></i></a>
+								</div>
+								<div class="col-md-3" style="padding-top:5px;padding-bottom:5px;">
+									<button action="submit" name="filt" class="btn btn-primary"><i class="fa fa-search"></i> Procurar</button>
+								</div>
+							</div>
+						</div>
+
+					<div class="row" style="padding-top:15px;">
+						<div class="col-md-9">
+						</div>
+						<div class="col-md-3">
+							<form>
+								<select hidden name='order1' >
+								  <option value="3" >Desdfdcendente</option>
+								  <option value="4" >Ascendente</option>
+								</select>
+								<noscript><input type="submit" value="Submit"></noscript>
+								</form>
+						</div>
+					</div>
+					<form>
+						<select name='order' class="form-control" style="width:150px;">
+						  <option value="1" >Descendente</option>
+						  <option value="2" >Ascendente</option>
+						</select>
+						<noscript><input type="submit" value="Submit"></noscript>
+					</form>
+
+					<div class="courses_container">
+						<form action="./courses.html" method="GET">
+						<div class="row courses_row">
+
+							<!-- Course  1 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/apoio_rua.jpg' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
+										<h3 class='course_title'><a href='./course.html'>Equipa de apoio de rua</a></h3>
+										<div class='course_teacher'>Unicef</div>
+										<div class='course_text'>
+											<p>Ajudar, cuidar e apoiar de pessoas a atravessar por períodos difícies</p>
+											<p style='color:black;'>Portugal - Aveiro - Glória e Vera Cruz</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>7 Voluntários</span>
+											</div>
+											<div class='course_price ml-auto'>14 H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 1 -->
+
+							<!-- Course  2 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/limpeza_praia.png' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
+										<h3 class='course_title'>
+											<a href='#'>Limpeza de Praia
+												<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+											</a>
+										</h3>
+										<div class='course_teacher'>Greenpeace</div>
+										<div class='course_text'>
+											<p>Em preparação para o período balnear e melhorar a saúde dos ecossistemas...</p>
+											<p style='color:black;'>Portugal - Porto - Gaia</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>200 Voluntários</span>
+											</div>
+											<div class='course_price ml-auto'>24 H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 2 -->
+
+							<!-- Course  3 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/search_rescue.jpg' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
+										<h3 class='course_title'>
+											<a href='#'>Voluntário proteção civil
+											</a>
+										</h3>
+										<div class='course_teacher'>Mossy Earth</div>
+										<div class='course_text'>
+											<p>Apoio à prevenção e combate de incêndios, bem como ajuda em pequenas operações de busca e salvamento</p>
+											<p style='color:black;'>Portugal - Viseu - Viseu</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>1 Voluntário</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 3 -->
+
+							<!-- Course  4 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/limpeza_rio.jpg' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-success' style='color:white;background:red;'>Inativo</span></h4>
+										<h3 class='course_title'>
+											<a href='#'>Limpeza do rio
+												<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+											</a>
+										</h3>
+										<div class='course_teacher'>Greenpeace</div>
+										<div class='course_text'>
+											<p>Limpeza de resíduos acumulados em São Jacinto, tanto resíduos orgânicos como de outros tipos</p>
+											<p style='color:black;'>Portugal - Aveiro - São Jacinto</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>20 Voluntário</span>
+											</div>
+											<div class='course_price ml-auto'>10 H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 4 -->
+
+							<!-- Course  5 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/reflorestacao.jpg' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-success' style='color:white;background:red;'>Inativo</span></h4>
+										<h3 class='course_title'>
+											<a href='#'>Reflorestação de pinhal
+											</a>
+										</h3>
+										<div class='course_teacher'>Mossy Earth</div>
+										<div class='course_text'>
+											<p>Reflorestação da reserva florestal em Oliveira de Frades impactada pelos incêndios que deflagraram em 2017</p>
+											<p style='color:black;'>Portugal - Viseu - Oliveira de Frades</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>50 Voluntário</span>
+											</div>
+											<div class='course_price ml-auto'>30 H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 5 -->
+
+							<!-- Course  6 -->
+							<div class='col-lg-6 course_col'>
+								<div class='course'>
+									<div class='course_image'><img style='min-width:100%;' src='./images/banco_alimentar.jpg' alt=''></div>
+									<div class='course_body'>
+										<h4><span class='badge badge-success' style='color:white;background:red;'>Inativo</span></h4>
+										<h3 class='course_title'>
+											<a href='#'>Recolha do Banco Alimentar
+												<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+											</a>
+										</h3>
+										<div class='course_teacher'>Banco Alimentar</div>
+										<div class='course_text'>
+											<p>Campanha de recolha de alimentos em supermercados físicos e online, bem como outros estabelecimentos</p>
+											<p style='color:black;'>Portugal</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>100 Voluntário</span>
+											</div>
+											<div class='course_price ml-auto'>16 H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Course 6 -->
+
+
+						</div>
+						
+						<div class="row pagination_row">
+							<div class="col">
+								<div class="pagination_container d-flex flex-row align-items-center justify-content-start">
+									<ul class="pagination_list">
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+									</ul>
+									<div class="courses_show_container ml-auto clearfix">
+										<div class="courses_show_text">Showing <span class="courses_showing">1-6</span> of <span class="courses_total">26</span> results:</div>
+										<div class="courses_show_content">
+											<span>Show: </span>
+											<select id="courses_show_select" class="courses_show_select">
+												<option>6</option>
+												<option>12</option>
+												<option>24</option>
+												<option>36</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</form>
+				</div>
+
+				<!-- Courses Sidebar -->
+				<div class="col-lg-4">
+					<div class="sidebar">
+
+						<!-- Categories -->
+						<div class="sidebar_section">
+							<div class="sidebar_section_title">Área de Atuação</div>
+							<form>
+							<div class="sidebar_categories">
+								<ul>
+									<li><a href="#">Ambiente</a></li>
+									<li><a href="#">Cidadania e Direitos</a></li>
+									<li><a href="#">Cultura e Artes</a></li>
+									<li><a href="#">Desporto e Lazer</a></li>
+									<li><a href="#">Educação</a></li>
+									<li><a href="#">Novas Tecnologias</a></li>
+									<li><a href="#">Saúde</a></li>
+									<li><a href="#">Solidariedade Social</a></li>
+								</ul>
+							</div>
+							<a class="btn btn-info" href="#">Perto de mim</a>
+						</form>
+						</div>
+
+						<!-- Latest Course -->
+						<div class="sidebar_section">
+							<div class="sidebar_section_title">Último Eventos</div>
+							<div class="sidebar_latest">
+								<form >
+									<!-- Evento pequeno 1 -->
+									<div class='latest d-flex flex-row align-items-start justify-content-start'>
+										<div class='latest_image'><div><img src='./images/apoio_rua.jpg' alt=''></div></div>
+										<div class='latest_content'>
+										<div class='latest_title'><a href='#'>Equipa de apoio de rua</a></div>
+										<div class='latest_price'>14 H</div>
+										</div>
+									</div>
+									<!-- Fim evento pequeno 1-->
+
+									<!-- Evento pequeno 2 -->
+									<div class='latest d-flex flex-row align-items-start justify-content-start'>
+										<div class='latest_image'><div><img src='./images/limpeza_praia.png' alt=''></div></div>
+										<div class='latest_content'>
+										<div class='latest_title'><a href='#'>Limpeza de Praia</a></div>
+										<div class='latest_price'>24 H</div>
+										</div>
+									</div>
+									<!-- Fim evento pequeno 2 -->
+
+							</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="newsletter_content text-lg-left text-center">
+							<div class="newsletter_title">Regista-te para saberes mais</div>
+							<div class="newsletter_subtitle">Para obteres mais pormenores sobre o funcionamento da nossa plataforma.</div>
+						</div>
+						<div class="newsletter_form_container ml-lg-auto">
+							<a style="padding-top:10px;" href="./Login_Vol/index.html" class=" btn newsletter_button">Voluntário</a>
+							<a style="padding-top:10px;" href="./Login_org/index.html" class=" btn newsletter_button">Organização</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_background" style="background-image:url(images/footer_background.png)"></div>
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a>
+											<div class="footer_logo_text">Help2<span>Everyone</span></div>
+										</a>
+									</div>
+									<div class="footer_about_text">
+										<p>Acompanha novidades através das Redes Sociais</p>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://pt.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contacta-nos</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Morada: Universidade de Aveiro, 3810-193 Aveiro</li>
+											<li>Telefone: 232456765</li>
+											<li>Email: help2everyone@gmail.com</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Navegação</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="about.html">Sobre</a></li>
+											<li><a href="contact.html">Contato</a></li>
+											<li><a href="courses.html">Eventos</a></li>
+											<li><a href="blog.html">Notícias</a></li>
+											<li><a href="#">Voluntários</a></li>
+											<li><a href="#">Organizações</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class="footer_title">Em breve...</div>
+									<div class="footer_mobile_content">
+										<div class="footer_image"><a><img src="images/mobile_1.png" alt=""></a></div>
+										<div class="footer_image"><a><img src="images/mobile_2.png" alt=""></a></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Help2Everyone - Todos direitos reservados
+	<!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. --></div>
+						<div class="ml-lg-auto cr_links">
+							<ul class="cr_list">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/courses.js"></script>
+</body>
+</html>
