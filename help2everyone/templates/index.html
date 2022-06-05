@@ -1,1 +1,831 @@
-<h1>Hello World</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Help2Everyone</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Help2Everyone">
+<!--
+<meta name="description" content="Unicat project">-->
+<link rel="icon" href="{% static 'images/logo.ico'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+<link>
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<ul class="top_bar_contact_list">
+									<li><div class="question">Tens alguma questão?</div></li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<div>232456765</div>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<div>help2everyone@gmail.com</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+									<!--<div class="logo_text">Help <span style="color:green">2</span> <span> Everyone</span></div>-->
+									<a class="navbar-brand" href="{% url 'index' %}">
+										<img src="{% static './images/shortlogo.ico' %}" class="d-inline-block align-top imgnav Logo_text" alt="Help2Everyone">
+								</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li class="active"><a href="{% url 'index' %}">Home</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Sobre
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+											<a class="dropdown-item" href="{% url 'about' %}">Sobre</a>
+											<a class="dropdown-item" href="{% url 'blog' %}">Notícias</a>
+									</li>
+									<li><a href="{% url 'events' %}">Eventos</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Registados
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="#">Voluntários</a>
+											<a class="dropdown-item" href="#">Organizações</a>
+									</li>
+									<li><a href="{% url 'contact' %}">Contato</a></li>
+								</ul>
+
+								<!-- Hamburger -->
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Menu -->
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="{% url 'index' %}">Home</a></li>
+				<li class="menu_mm"><a href="{% url 'about' %}">Sobre</a></li>
+				<li class="menu_mm"><a href="{% url 'events' %}">Eventos</a></li>
+				<li class="menu_mm"><a href="{% url 'blog' %}">Notícias</a></li>
+				<li class='menu_mm'><a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						Registados
+				</a>
+					<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+						<a class='dropdown-item' href="#">Voluntários</a>
+						<a class='dropdown-item' href="#">Organizações</a>
+					</div>
+				</li>
+				<li class="menu_mm"><a href="{% url 'contact' %}">Contato</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_slider_container">
+			<!-- Home Slider -->
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image: url({% static 'images/slider_1.jpg' %});"></div>
+					<div class="home_slider_content">
+						<div class="container">
+							<div class="row">
+								<div class="col text-center">
+									<div class="home_slider_title" style="">Voluntariado é o maior exercício da democracia</div>
+									<div class="home_slider_subtitle" style="font-weight: bold;">"Podes votar nas eleições uma vez por ano, mas ao voluntariares-te, votas todos os dias para o tipo de comunidade em que queres viver"</div>
+									<div class="home_slider_form_container">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({% static 'images/home_slider_2.jpg' %});"></div>
+					<div class="home_slider_content">
+						<div class="container">
+							<div class="row">
+								<div class="col text-center">
+									<div class="home_slider_title " style="">Ajudamo-nos uns aos outros</div>
+									<div class="home_slider_subtitle" style="font-weight: bold;">"Ninguém pode fazer tudo, mas toda a gente junta pode fazer alguma coisa"</div>
+									<div class="home_slider_form_container">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({% static 'images/slider_5.jpg' %});"></div>
+					<div class="home_slider_content">
+						<div class="container">
+							<div class="row">
+								<div class="col text-center">
+									<div class="home_slider_title" style="">Ajuda a marcar vidas</div>
+									<div class="home_slider_subtitle" style="font-weight: bold;">"Dá um pouco de ti e recebe um pouco de todos"</div>
+									<div class="home_slider_form_container">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Home Slider Nav -->
+
+		<div class="home_slider_nav home_slider_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+		<div class="home_slider_nav home_slider_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+	</div>
+
+	<!-- Features -->
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Bem-vindo ao Help2Everyone</h2>
+						<div class="section_subtitle"><p>Com a ajuda do Help2Everyone vais poder sentir uma alegria como nunca antes,
+							 terás a hipótese de conhecer novas pessoas que também querem ajudar e poderás sentir-te útil como nunca antes.
+						 	 Regista-te já hoje e começa a ajudar.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row features_row">
+
+				<!-- Features Item -->
+				<div class="col-lg-3 feature_col">
+					<div class="feature text-center trans_400">
+						<div class="feature_icon"><img src="{% static 'images/helphands.png' %}" alt=""></div>
+						<h3 class="feature_title">Ajuda e sê Ajudado</h3>
+						<div class="feature_text"><p>Um Voluntário não é pago com dinheiro, mas sim com amor e apreço</p></div>
+					</div>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-lg-3 feature_col">
+					<div class="feature text-center trans_400">
+						<div class="feature_icon"><img src="{% static 'images/meet.png' %}" alt=""></div>
+						<h3 class="feature_title">Conhece novas pessoas</h3>
+						<div class="feature_text"><p>Pouca gente, em poucos lugares, a fazer coisas pequenas, pode mudar o mundo</p></div>
+					</div>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-lg-3 feature_col">
+					<div class="feature text-center trans_400">
+						<div class="feature_icon"><img src="{% static 'images/smile.png' %}" alt=""></div>
+						<h3 class="feature_title">Experiência Memorável</h3>
+						<div class="feature_text"><p>Ningúem pode fazer tudo, mas todos juntos podemos fazer o que quisermos</p></div>
+					</div>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-lg-3 feature_col">
+					<div class="feature text-center trans_400">
+						<div class="feature_icon"><img src="{% static 'images/solidario.png' %}" alt=""></div>
+						<h3 class="feature_title">Sê Solidário</h3>
+						<div class="feature_text"><p>Voluntariado não é só uma palavra, é amor, dedicação e também ação</p></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Popular events -->
+
+	<div class="events">
+		<div class="section_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/courses_background.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Últimos Eventos</h2>
+						<div class="section_subtitle"><p>Vê por ti próprio os últimos eventos realizados pelas organizações registadas no Help2Everyone</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row events_row">
+				
+				<!-- Start Course 1 -->
+				<div class='col-lg-4 course_col'>
+					<div class='course'>
+						<div class='course_image'><img style='width:100%;' src="{% static './images/limpeza_rio.jpg' %}" alt=''></div>
+						<div class='course_body'>
+							<h3 class='course_title'>
+								<a href='#'>Limpeza do rio
+									<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+								</a>
+							</h3>
+							<div class='course_teacher'>Greenpeace</div>
+							<div class='course_text'>
+								<p>Limpeza de resíduos acumulados em São Jacinto, tanto resíduos orgânicos como de outros tipos</p>
+							</div>
+						</div>
+						<div class='course_footer'>
+							<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+								<div class='course_info'>
+									<i class='fa fa-users' aria-hidden='true'></i>
+									<span>20 Voluntários</span>
+								</div>
+								<div class='course_price ml-auto'>10 H</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Course 1 -->
+
+				<!-- Start Course 2 -->
+				<div class='col-lg-4 course_col'>
+					<div class='course'>
+						<div class='course_image'><img style='width:100%;' src="{% static 'images/reflorestacao.jpg' %}" alt=''></div>
+						<div class='course_body'>
+							<h3 class='course_title'>
+								<a href='#'>Reflorestação de pinhal
+								</a>
+							</h3>
+							<div class='course_teacher'>Mossy Earth</div>
+							<div class='course_text'>
+								<p>Reflorestação da reserva florestal em Oliveira de Frades impactada pelos incêndios que deflagraram em 2017</p>
+							</div>
+						</div>
+						<div class='course_footer'>
+							<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+								<div class='course_info'>
+									<i class='fa fa-users' aria-hidden='true'></i>
+									<span>50 Voluntários</span>
+								</div>
+								<div class='course_price ml-auto'>30 H</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Course 2 -->
+
+				<!-- Start Course 3 -->
+				<div class='col-lg-4 course_col'>
+					<div class='course'>
+						<div class='course_image'><img style='width:100%;' src="{% static 'images/banco_alimentar.jpg' %}" alt=''></div>
+						<div class='course_body'>
+							<h3 class='course_title'>
+								<a href='#'>Recolha do Banco Alimentar
+									<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+								</a>
+							</h3>
+							<div class='course_teacher'>Banco Alimentar</div>
+							<div class='course_text'>
+								<p>Campanha de recolha de alimentos em supermercados físicos e online, bem como outros estabelecimentos</p>
+							</div>
+						</div>
+						<div class='course_footer'>
+							<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+								<div class='course_info'>
+									<i class='fa fa-users' aria-hidden='true'></i>
+									<span>100 Voluntários</span>
+								</div>
+								<div class='course_price ml-auto'>16 H</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Course 3 -->
+
+			</div>
+			<div class="row">
+				<div class="col">
+					<!--<div class="events_button trans_200"><a href="./events.html">Ver todos os Eventos</a></div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Counter -->
+
+	<div class="counter">
+		<div class="counter_background" style="background-image:url({% static 'images/counter_background.jpg' %})"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="counter_content">
+						<h2 class="counter_title">Regista-te Hoje!</h2>
+						<div class="counter_text"><p>Junta-te a uma comunidade crescente de pessoas com o mesmo objetivo que tu e ajuda
+						a tornar o mundo um lugar melhor para as pessoas que precisam. Ajuda no que conseguires, por mais pouco que seja
+						e vais receber o mundo em troca.</p></div>
+
+						<!-- Milestones -->
+
+						<div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+
+							<!-- Milestone -->
+							<div class="milestone">
+								<div class="milestone_counter" data-end-value="12" data-sign-after="+">0</div>
+								<div class="milestone_text">Meses</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="milestone">
+								<div class="milestone_counter" data-end-value="500" data-sign-after="+">0</div>
+								<div class="milestone_text">Inscritos</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="milestone">
+								<div class="milestone_counter" data-end-value="100" data-sign-after="+">0</div>
+								<div class="milestone_text">Organizações</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="milestone">
+								<div class="milestone_counter" data-end-value="3000">0</div>
+								<div class="milestone_text">Eventos</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="counter_form">
+				<div class="row fill_height">
+					<div class="col fill_height">
+						<form class="counter_form_content d-flex flex-column align-items-center justify-content-center">
+							<div class="counter_form_title">Registar</div>
+							<input type="text" name="Nome" class="counter_input" placeholder="Nome" required="required">
+							<input type="text" name="Apelido" class="counter_input" placeholder="Apelido" required="required">
+							<input type="text" name="Email" class="counter_input" placeholder="Email" required="required">
+							<input type="text" name="User" class="counter_input" placeholder="Utilizador" required="required">
+							<button type="submit" class="counter_form_button">Registar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Events -->
+
+	<div class="events">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Próximos Eventos</h2>
+						<div class="section_subtitle"><p>Eventos que se irão realizar nos próximos dias</p></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row events_row">
+
+				<!-- Evento 1 -->
+				<div class='col-lg-4 event_col'>
+					<div class='event event_left'>
+						<div class='event_image'><img style='width:100%;' src="{% static 'images/apoio_rua.jpg' %}" alt=''></div>
+						<div class='event_body d-flex flex-row align-items-start justify-content-start'>
+							<div class='event_date'>
+								<div class='d-flex flex-column align-items-center justify-content-center trans_200'>
+									<div class='event_day trans_200'>3</div>
+									<div class='event_month trans_200'>Jun</div>
+								</div>
+							</div>
+							<div class='event_content'>
+								<div class='event_title'>
+									<a href='#'>Equipa de apoio de rua
+									</a>
+								</div>
+								<div class='event_info_container'>
+									<div class='event_info'><i class='fa fa-calendar' aria-hidden='true'></i><span>03/06/2022 até 05/06/2022</span></div>
+									<div class='event_info'><i class='fa fa-map-marker' aria-hidden='true'></i><span>Aveiro</span></div>
+									<div class='event_text'>
+										<p>Ajudar, cuidar e apoiar de pessoas a atravessar por períodos difícies</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim evento 1 -->
+
+				<!-- Evento 2 -->
+				<div class='col-lg-4 event_col'>
+					<div class='event event_left'>
+						<div class='event_image'><img style='width:100%;' src="{% static 'images/limpeza_praia.png' %}" alt=''></div>
+						<div class='event_body d-flex flex-row align-items-start justify-content-start'>
+							<div class='event_date'>
+								<div class='d-flex flex-column align-items-center justify-content-center trans_200'>
+									<div class='event_day trans_200'>1</div>
+									<div class='event_month trans_200'>Jul</div>
+								</div>
+							</div>
+							<div class='event_content'>
+								<div class='event_title'>
+									<a href='#'>Limpeza de Praia
+										<span title='Evento Verificado' style='color:#1E90FF;'><i class='fa fa-check-circle'></i></span>
+									</a>
+								</div>
+								<div class='event_info_container'>
+									<div class='event_info'><i class='fa fa-calendar' aria-hidden='true'></i><span>01/08/2022 até 03/08/2022</span></div>
+									<div class='event_info'><i class='fa fa-map-marker' aria-hidden='true'></i><span>Porto</span></div>
+									<div class='event_text'>
+										<p>Em preparação para o período balnear e melhorar a saúde dos ecossistemas...</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim evento 2 -->
+
+				<!-- Evento 3 -->
+				<div class='col-lg-4 event_col'>
+					<div class='event event_left'>
+						<div class='event_image'><img style='width:100%;' src="{% static 'images/search_rescue.jpg' %}" alt=''></div>
+						<div class='event_body d-flex flex-row align-items-start justify-content-start'>
+							<div class='event_date'>
+								<div class='d-flex flex-column align-items-center justify-content-center trans_200'>
+									<div class='event_day trans_200'>20</div>
+									<div class='event_month trans_200'>Jun</div>
+								</div>
+							</div>
+							<div class='event_content'>
+								<div class='event_title'>
+									<a href='#'>Voluntário proteção civil
+									</a>
+								</div>
+								<div class='event_info_container'>
+									<div class='event_info'><i class='fa fa-calendar' aria-hidden='true'></i><span>20/07/2022 até 01/10/2022</span></div>
+									<div class='event_info'><i class='fa fa-map-marker' aria-hidden='true'></i><span>Viseu</span></div>
+									<div class='event_text'>
+										<p>Apoio à prevenção e combate de incêndios, bem como ajuda em pequenas operações de busca e salvamento</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim evento 3 -->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Team -->
+
+	<div class="team">
+		<div class="team_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/team_background.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Organizações com mais eventos</h2>
+						<div class="section_subtitle"><p>Aqui estão as organizações inscritas na H2E que possuem mais eventos registados.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row team_row">
+
+				<!-- Organização 1 -->
+				<div class="col-lg-3 col-md-6 team_col">
+					<div class="team_item">
+						<div class="team_image"><img src="{% static 'images/mossy_earth.png' %}" alt=""></div>
+						<div class="team_body">
+							<div class="team_title"><a style='color:black' href="#">Mossy Earth</a></div>
+							<div class="team_subtitle">general@mossy-earth.com</div>
+							<div class="social_list">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Organização 2 -->
+				<div class="col-lg-3 col-md-6 team_col">
+					<div class="team_item">
+						<div class="team_image"><img src="{% static 'images/greenpeace.png' %}" alt=""></div>
+						<div class="team_body">
+							<div class="team_title"><a style='color:black' href="#">Greenpeace</a></div>
+							<div class="team_subtitle">general@greenpeace.com</div>
+							<div class="social_list">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Organização 3 -->
+				<div class="col-lg-3 col-md-6 team_col">
+					<div class="team_item">
+						<div class="team_image"><img src="{% static 'images/banco_alimentar.png' %}" alt=""></div>
+						<div class="team_body">
+							<div class="team_title"><a style='color:black' href="#">Banco Alimentar</a></div>
+							<div class="team_subtitle">general@bancoalimentar.com</div>
+							<div class="social_list">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Organização 4 -->
+				<div class="col-lg-3 col-md-6 team_col">
+					<div class="team_item">
+						<div class="team_image"><img src="{% static 'images/unicef.png' %}" alt=""></div>
+						<div class="team_body">
+							<div class="team_title"><a style='color:black' href="#">Unicef</a></div>
+							<div class="team_subtitle">general@Unicef.com</div>
+							<div class="social_list">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Latest News -->
+	<div class="news">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Últimas Notícias</h2>
+						<div class="section_subtitle"><p>Nesta Secção pode ver as Últimas Notícias publicas sobre o site Help2Everyone.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row news_row">
+				<div class="col-lg-7 news_col">
+
+					<!-- Notícia principal -->
+					<div class="news_post_large_container">
+						<div class="news_post_large">
+							<div class="news_post_image"><img src="{% static 'images/ad3.png' %}" alt=""></div>
+							<div class="news_post_large_title"><a href="#">H2E lidera no ranking de empresas sem fins lucrativos</a></div>
+							<div class="news_post_meta">
+								<ul>
+									<li><a>admin</a></li>
+									<li><a>14 de Maio de 2022</a></li>
+								</ul>
+							</div>
+							<div class="news_post_text">
+								<p>Com esta nova plataforma e o apoio de todos envolvidos na mesma, tanto organizações e voluntários, foi o que tornou possível...</p>
+							</div>
+							<div class="news_post_link"><a href="#">Ver Notícia</a></div>
+						</div>
+					</div>
+				</div>
+				<!-- Notícias pequenas -->
+				<div class="col-lg-5 news_col">
+					<div class="news_posts_small">
+						
+
+							<!-- Pequena 1 -->
+							<div class='news_post_small'>
+								<div class='news_post_small_title'><a href='#'>Número de Voluntários triplica</a></div>
+								<div class='news_post_meta'>
+									<ul>
+										<li><a>admin</a></li>
+										<li><a>2 de Março de 2022</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Pequena 2 -->
+							<div class='news_post_small'>
+								<div class='news_post_small_title'><a href='#'>Benefícios do voluntariado começam a notar-se</a></div>
+								<div class='news_post_meta'>
+									<ul>
+										<li><a>admin</a></li>
+										<li><a>25 de Fevereiro de 2022</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Pequena 2 -->
+							<div class='news_post_small'>
+								<div class='news_post_small_title'><a href='#'>Mossy Earth destacada como a melhor organização do ano de 2021</a></div>
+								<div class='news_post_meta'>
+									<ul>
+										<li><a>admin</a></li>
+										<li><a>1 de Janeiro de 2022</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/newsletter.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="newsletter_content text-lg-left text-center">
+							<div class="newsletter_title">Regista-te para saberes mais</div>
+							<div class="newsletter_subtitle">Para obteres mais pormenores sobre o funcionamento da nossa plataforma.</div>
+						</div>
+						<div class="newsletter_form_container ml-lg-auto">
+							<a style="padding-top:10px;" href="#" class=" btn newsletter_button">Voluntário</a>
+							<a style="padding-top:10px;" href="#" class=" btn newsletter_button">Organização</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_background" style="background-image:url({% static 'images/footer_background.png' %});"></div>
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a>
+											<div class="footer_logo_text">Help2<span>Everyone</span></div>
+										</a>
+									</div>
+									<div class="footer_about_text">
+										<p>Acompanha novidades através das Redes Sociais</p>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://pt.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contacta-nos</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Morada: Universidade de Aveiro, 3810-193 Aveiro</li>
+											<li>Telefone: 232456765</li>
+											<li>Email: help2everyone@gmail.com</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Navegação</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="{% url 'index' %}">Home</a></li>
+											<li><a href="{% url 'about' %}">Sobre</a></li>
+											<li><a href="{% url 'contact' %}">Contato</a></li>
+											<li><a href="{% url 'events' %}">Eventos</a></li>
+											<li><a href="{% url 'blog' %}">Notícias</a></li>
+											<li><a href="#">Voluntários</a></li>
+											<li><a href="#">Organizações</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class="footer_title">Em breve...</div>
+									<div class="footer_mobile_content">
+										<div class="footer_image"><a><img src="{% static 'images/mobile_1.png' %}" alt=""></a></div>
+										<div class="footer_image"><a><img src="{% static 'images/mobile_2.png' %}" alt=""></a></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Help2Everyone - Todos direitos reservados
+	<!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. --></div>
+						<div class="ml-lg-auto cr_links">
+							<ul class="cr_list">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+	<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+	<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/easing/easing.js' %}"></script>
+	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+	</body>
+	</html>

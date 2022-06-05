@@ -1,0 +1,380 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Help2Everyone</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Help2Everyone">
+<!--
+<meta name="description" content="Unicat project">-->
+<link rel="icon" href="{% static 'images/logo.ico'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/video-js/video-js.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/blog.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/blog_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<ul class="top_bar_contact_list">
+									<li><div class="question">Tens alguma questão?</div></li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<div>232456765</div>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<div>help2everyone@gmail.com</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a class="navbar-brand" href="{% url 'index' %}">
+									<img src="{% static 'images/shortlogo.ico' %}" class="d-inline-block align-top imgnav Logo_text" alt="Help2Everyone">
+							</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li><a href="{% url 'index' %}">Home</a></li>
+									<li class="nav-item dropdown active">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Sobre
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+											<a class="dropdown-item" href="{% url 'about' %}">Sobre</a>
+											<a class="dropdown-item" href="{% url 'blog' %}">Notícias</a>
+									</li>
+									<li><a href="{% url 'events' %}">Eventos</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Registados
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="#">Voluntários</a>
+											<a class="dropdown-item" href="#">Organizações</a>
+									</li>
+									<li><a href="{% url 'contact' %}">Contato</a></li>
+								</ul>
+
+								<!-- Hamburger -->
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="{% url 'index' %}">Home</a></li>
+				<li class="menu_mm"><a href="{% url 'about' %}">Sobre</a></li>
+				<li class="menu_mm"><a href="{% url 'events' %}">Eventos</a></li>
+				<li class="menu_mm"><a href="{% url 'blog' %}">Notícias</a></li>
+				<li class='menu_mm'><a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						Registados
+				</a>
+					<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+						<a class='dropdown-item' href="#">Voluntários</a>
+						<a class='dropdown-item' href="#">Organizações</a>
+					</div>
+				</li>
+				<li class="menu_mm"><a href="{% url 'contact' %}">Contato</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- Home -->
+
+	<div class="home">
+		<div class="breadcrumbs_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="breadcrumbs">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>Notícias</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Blog -->
+
+	<div class="blog">
+		<div class="container">
+			<form class="form-control">
+				<h6 style="padding-bottom:15px;">Filtrar Categoria:</h6>
+				<button class="btn btn-success" name="ButCategoria1" style="margin-top:5px;"><i class="fa fa-tree"></i> Ambiente</button>
+				<button class="btn btn-success" name="ButCategoria2" style="margin-top:5px;"><i class="fa fa-users"></i> Voluntários</button>
+				<button class="btn btn-success" name="ButCategoria3" style="margin-top:5px;"><i class="fa fa-building-o"></i> Organizações</button>
+				<button class="btn btn-success" name="ButCategoria4" style="margin-top:5px;"><i class="fa fa-book"></i> Eventos</button>
+				<button class="btn btn-success" name="ButCategoria5" style="margin-top:5px;"><i class="fa fa-heartbeat"></i>Ajuda Humanitária</button>
+				<button class="btn btn-success" name="ButCategoria6" style="margin-top:5px;"><i class="fa fa-plus"></i> Outros</button>
+				<button class="btn btn-info" name="recarregar" style="margin-top:5px;"><i class="fa fa-refresh"></i></button>
+
+			</form>
+			<div class="row" style="padding-top:15px;">
+				<div class="col">
+					<div class="blog_post_container">
+
+						<!-- Notícia 1 -->
+						<div class='blog_post trans_200'>
+							<div class='blog_post_image'><img src="{% static './images/ad3.png' %}" alt=''></div>
+							<div class='blog_post_body'>
+								<div class='blog_post_title'><a href='#'>H2E lidera no ranking de empresas sem fins lucrativos</a></div>
+								<div class='blog_post_meta'>
+									<ul>
+										<li><a>Admin</a></li>
+										<li><a>14 de Maio de 2022</a></li>
+										<li><a>Categoria: Outros</a></li>
+									</ul>
+								</div>
+								<div class='blog_post_text'>
+									<p>Com esta nova plataforma e o apoio de todos envolvidos na mesma, tanto organizações e voluntários, foi o que tornou possível....</p>
+								</div>
+							</div>
+						</div>
+						<!-- Fim Notícia 1 -->
+
+						<!-- Notícia 2 -->
+						<div class='blog_post trans_200'>
+							<div class='blog_post_image'><img src="{% static 'images/ad4.png' %}" alt=''></div>
+							<div class='blog_post_body'>
+								<div class='blog_post_title'><a href='#'>Número de Voluntários triplica</a></div>
+								<div class='blog_post_meta'>
+									<ul>
+										<li><a>Admin</a></li>
+										<li><a>14 de Março de 2022</a></li> 
+										<li><a>Categoria: Voluntários</a></li>
+									</ul>
+								</div>
+								<div class='blog_post_text'>
+									<p>A facilidade de adesão ao voluntariado e a cada vez mais crescente vontade de ajudar outros...</p>
+								</div>
+							</div>
+						</div>
+						<!-- Fim Notícia 2 -->
+
+						<!-- Notícia 3 -->
+						<div class='blog_post trans_200'>
+							<div class='blog_post_image'><img src="{% static 'images/ad5.png' %}" alt=''></div>
+							<div class='blog_post_body'>
+								<div class='blog_post_title'><a href='#'>Benefícios do voluntariado começam a notar-se</a></div>
+								<div class='blog_post_meta'>
+									<ul>
+										<li><a>Admin</a></li>
+										<li><a>14 de Fevereiro de 2022</a></li> 
+										<li><a>Categoria: Voluntários, Ajuda Humanitária</a></li>
+									</ul>
+								</div>
+								<div class='blog_post_text'>
+									<p>O aumento do número de organizações e voluntários permitiu um maior impacto nas comunidades...</p>
+								</div>
+							</div>
+						</div>
+						<!-- Fim Notícia 3 -->
+
+						<!-- Notícia 4 -->
+						<div class='blog_post trans_200'>
+							<div class='blog_post_image'><img src="{% static 'images/home_slider_3.jpg' %}" alt=''></div>
+							<div class='blog_post_body'>
+								<div class='blog_post_title'><a href='#'>Mossy Earth destacada como a melhor organização do ano de 2021</a></div>
+								<div class='blog_post_meta'>
+									<ul>
+										<li><a>Admin</a></li>
+										<li><a>1 de Janeiro de 2022</a></li> 
+										<li><a>Categoria: Organizações</a></li>
+									</ul>-
+							</div>
+						</div>
+						<!-- Fim Notícia 4 -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/newsletter.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="newsletter_content text-lg-left text-center">
+							<div class="newsletter_title">Regista-te para saberes mais</div>
+							<div class="newsletter_subtitle">Para obteres mais pormenores sobre o funcionamento da nossa plataforma.</div>
+						</div>
+						<div class="newsletter_form_container ml-lg-auto">
+							<a style="padding-top:10px;" href="#" class=" btn newsletter_button">Voluntário</a>
+							<a style="padding-top:10px;" href="#" class=" btn newsletter_button">Organização</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_background" style="background-image:url({% static 'images/footer_background.png'%})"></div>
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a>
+											<div class="footer_logo_text">Help2<span>Everyone</span></div>
+										</a>
+									</div>
+									<div class="footer_about_text">
+										<p>Acompanha novidades através das Redes Sociais</p>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://pt.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contacta-nos</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Morada: Universidade de Aveiro, 3810-193 Aveiro</li>
+											<li>Telefone: 232456765</li>
+											<li>Email: help2everyone@gmail.com</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Navegação</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="{% url 'index' %}">Home</a></li>
+											<li><a href="{% url 'about' %}">Sobre</a></li>
+											<li><a href="{% url 'contact' %}">Contato</a></li>
+											<li><a href="{% url 'events' %}">Eventos</a></li>
+											<li><a href="{% url 'blog' %}">Notícias</a></li>
+											<li><a href="#">Voluntários</a></li>
+											<li><a href="#">Organizações</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							
+							<div class="col-lg-3 footer_col clearfix">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class="footer_title">Em breve...</div>
+									<div class="footer_mobile_content">
+										<div class="footer_image"><a><img src="{% static 'images/mobile_1.png' %}" alt=""></a></div>
+										<div class="footer_image"><a><img src="{% static 'images/mobile_2.png' %}" alt=""></a></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Help2Everyone - Todos direitos reservados
+	<!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. --></div>
+						<div class="ml-lg-auto cr_links">
+							<ul class="cr_list">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
+<script src="{% static 'plugins/easing/easing.js'%}"></script>
+<script src="{% static 'plugins/masonry/masonry.js'%}"></script>
+<script src="{% static 'plugins/video-js/video.min.js'%}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="{% static 'js/blog.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% if value %}
+    <ul>
+    {% for question in value %}
+        <h1> You are a {{ question }} </h1>
+        <a href="{% url 'index' %}">{{ question }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
