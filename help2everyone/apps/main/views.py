@@ -1,9 +1,5 @@
-import os
 from django.shortcuts import render # Render html code
 from django.http import HttpResponse
-from django.contrib.staticfiles import finders
-
-from help2everyone.settings import BASE_DIR, MEDIA_ROOT, PROJECT_ROOT, STATIC_ROOT, STATIC_URL
 
 # Create your views here.
 def say_hello(request):
