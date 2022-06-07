@@ -47,7 +47,11 @@
 								</ul>
 								<div class="top_bar_login ml-auto">
 									<div class="login_button">
-										<a href="{% url 'chooselog' %}">Registar ou Entrar</a>
+										{% if authentication %}
+											<a href="{% url 'logout' %}">Logout</a>
+										{% else %}
+											<a href="{% url 'chooselog' %}">Registar ou Entrar</a>
+										{% endif %}
 									</div>
 								</div>
 							</div>
@@ -208,13 +212,46 @@
 						<form action="./events.html" method="GET">
 						<div class="row courses_row">
 
-							<!-- Course  1 -->
+							<!-- dynamic posts -->
+							{% for event in events %}
+								<div class='col-lg-6 course_col'>
+								<div class='course'>
+									{% if event.eventMainImage == 'events_images/apoio_rua.jpg' %}
+										<div class='course_image'><img style='min-width:100%;' src="{% static 'images/apoio_rua.jpg' %}" alt=''></div>
+									{% elif event.eventMainImage == 'events_images/limpeza_praia.png' %}
+										<div class='course_image'><img style='min-width:100%;' src="{% static 'images/limpeza_praia.png' %}" alt=''></div>
+									{% endif %}
+									<div class='course_body'>
+										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
+										<h3 class='course_title'><a href="{% url 'event' %}?event_id={{event.id}}">{{event.eventName}}</a></h3>
+										<div class='course_teacher'>{{event.idOrganization.orgName}}</div>
+										<div class='course_text'>
+											<p>{{event.shortDescription}}</p>
+											<p style='color:black;'>{{event.address}}</p>
+										</div>
+									</div>
+									<div class='course_footer'>
+										<div class='course_footer_content d-flex flex-row align-items-center justify-content-start'>
+											<div class='course_info'>
+												<i class='fa fa-users' aria-hidden='true'></i>
+												<span>{{event.totalVoluntarys}} Voluntários</span>
+											</div>
+											<div class='course_price ml-auto'>{{event.hours}} H</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+							<!-- end dynamic posts -->
+
+
+							<!-- Course  1 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/apoio_rua.jpg' %}" alt=''></div>
 									<div class='course_body'>
 										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
-										<h3 class='course_title'><a href="{% static 'event.html' %}">Equipa de apoio de rua</a></h3>
+										<h3 class='course_title'><a href="{% url 'event' %}">Equipa de apoio de rua</a></h3>
 										<div class='course_teacher'>Unicef</div>
 										<div class='course_text'>
 											<p>Ajudar, cuidar e apoiar de pessoas a atravessar por períodos difícies</p>
@@ -232,9 +269,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 1 -->
+							 End Course 1 -->
 
-							<!-- Course  2 -->
+							<!-- Course  2 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/limpeza_praia.png' %}" alt=''></div>
@@ -262,7 +299,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 2 -->
+							 End Course 2 -->
 
 							<!-- Course  3 -->
 							<div class='col-lg-6 course_col'>

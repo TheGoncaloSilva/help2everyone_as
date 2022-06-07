@@ -43,7 +43,11 @@
 								</ul>
 								<div class="top_bar_login ml-auto">
 									<div class="login_button">
-										<a href="{% url 'chooselog' %}">Registar ou Entrar</a>
+										{% if authentication %}
+											<a href="{% url 'logout' %}">Logout</a>
+										{% else %}
+											<a href="{% url 'chooselog' %}">Registar ou Entrar</a>
+										{% endif %}
 									</div>
 								</div>
 							</div>

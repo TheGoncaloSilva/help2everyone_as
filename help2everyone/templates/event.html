@@ -1,0 +1,690 @@
+{% load static %}<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>H2E: Eventos</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Help2Everyone">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+<meta name="description" content="Unicat project">-->
+<link rel="icon" href="{% static 'images/logo.ico'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/colorbox/colorbox.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/course.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/course_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+	<header class="header">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<ul class="top_bar_contact_list">
+									<li><div class="question">Tens alguma questão?</div></li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<div>232456765</div>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<div>help2everyone@gmail.com</div>
+									</li>
+								</ul>
+								<div class="top_bar_login ml-auto">
+									<div class="login_button">
+										{% if authentication %}
+											<a href="{% url 'logout' %}">Logout</a>
+										{% else %}
+											<a href="{% url 'chooselog' %}">Registar ou Entrar</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a class="navbar-brand" href="{% url 'index' %}">
+									<img src="{% static 'images/shortlogo.ico' %}" class="d-inline-block align-top imgnav Logo_text" alt="Help2Everyone">
+							</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li><a href="{% url 'index' %}">Home</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Sobre
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+											<a class="dropdown-item" href="{% url 'about' %}">Sobre</a>
+											<a class="dropdown-item" href="{% url 'blog' %}">Notícias</a>
+									</li>
+									<li><a href="{% url 'events' %}" active>Eventos</a></li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Registados
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="#">Voluntários</a>
+											<a class="dropdown-item" href="#">Organizações</a>
+									</li>
+									<li><a href="{% url 'contact' %}">Contato</a></li>
+								</ul>
+
+								<!-- Hamburger -->
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="{% url 'index' %}">Home</a></li>
+				<li class="menu_mm"><a href="{% url 'about' %}">Sobre</a></li>
+				<li class="menu_mm"><a href="{% url 'events' %}">Eventos</a></li>
+				<li class="menu_mm"><a href="{% url 'blog' %}">Notícias</a></li>
+				<li class='menu_mm'><a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						Registados
+				</a>
+					<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+						<a class='dropdown-item' href="#">Voluntários</a>
+						<a class='dropdown-item' href="#">Organizações</a>
+					</div>
+				</li>
+				<li class="menu_mm"><a href="{% url 'contact' %}">Contato</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="breadcrumbs_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="breadcrumbs">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="events.html">Eventos</a></li>
+								<li>Detalhe Evento</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Course -->
+	{% for event in event%}
+	<div class="course">
+		<div class="container">
+			<div class="row">
+
+				<!-- Course -->
+				<div class="col-lg-8">
+
+
+					{% if messages == 'success' %}
+					<div class='alert alert-success' role='alert'>
+						<div class='row'>
+							<div class='col-md-10'>
+								<strong>Sucesso! </strong>- {{message_info}}
+							</div>
+							<div class='col-md-2'>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'><i class='fa fa-times'></i></button>
+							</div>
+						</div>
+					</div>
+					{% elif messages == 'warning' %}
+					<div class='alert alert-warning' role='alert'>
+						<div class='row'>
+							<div class='col-md-10'>
+								<strong>Aviso! </strong>- {{message_info}}
+							</div>
+							<div class='col-md-2'>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'><i class='fa fa-times'></i></button>
+							</div>
+						</div>
+					</div>
+					{% elif messages == 'error' %}
+					<div class='alert alert-danger' role='alert'>
+						<div class='row'>
+							<div class='col-md-10'>
+								<strong>#ERRO# </strong>- {{message_info}}
+							</div>
+							<div class='col-md-2'>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'><i class='fa fa-times'></i></button>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+
+					<div class="course_container">
+						<div class="course_title">{{event.eventName}}</div>
+						<div class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+							
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Organização criadora:</div>
+								<div class="course_info_text"><a href='#'>{{event.idOrganization.orgName}}</a></div>
+							</div>
+		
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Avaliação:</div>
+								<div class="rating_r rating_r_4"><i></i><i></i><i></i><i></i><i></i></div>
+							</div>
+
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Idioma:</div>
+								<div class="course_info_text"><a>Português</a></div>
+							</div>
+
+						</div>
+
+						<!-- Course Image -->
+						{% if event.eventMainImage == 'events_images/apoio_rua.jpg' %}
+						<div class="course_image"><img src="{% static 'images/apoio_rua.jpg'%}" style="width:100%;" alt=""></div>
+						{% elif event.eventMainImage == 'events_images/limpeza_praia.png' %}
+						<div class="course_image"><img src="{% static 'images/limpeza_praia.png' %}" style="width:100%;" alt=""></div>
+						{% endif %}
+
+						<!-- Course Tabs -->
+						<div class="course_tabs_container">
+							<div class="tabs d-flex flex-row align-items-center justify-content-start">
+								<div class="tab active">Descrição</div>
+
+								<div class="tab">Observações Evento</div>
+							</div>
+							<div class="tab_panels">
+
+								<!-- Description -->
+								<div class="tab_panel active">
+										<div class="tab_panel_title">{{event.eventName}}</div>
+									<div class="tab_panel_content">
+										<div class="tab_panel_text">
+											<p>{{event.description}}</p>
+										</div>
+										<div class="tab_panel_section">
+											<div class="tab_panel_subtitle">Requesitos</div>
+											<ul class="tab_panel_bullets">
+												<li>Estar registado no H2E.</li>
+												<li>Estar disposto a cumprir com a informação dispponibilizada.</li>
+												<li>Voluntarios que não compareçam nos eventos a que concorrem serão gravemente prejudicados.</li>
+
+											</ul>
+										</div>
+										<div class="tab_panel_section">
+											<div class="tab_panel_subtitle">Função do Voluntário</div>
+											<div class="tab_panel_text">
+												<p>Assistir a organização</p>
+											</div>
+										</div>
+										<div class="tab_panel_faq">
+											<div class="tab_panel_title">Sobre</div>
+
+											<!-- Accordions -->
+											<div class="accordions">
+
+												<div class="elements_accordions">
+
+													<div class="accordion_container">
+														<div class="accordion d-flex flex-row align-items-center"><div>Qual é o tipo de Compromisso?</div></div>
+														<div class="accordion_panel">
+															<p>Neste evento o compromisso é valorizado</p>
+														</div>
+													</div>
+
+													<div class="accordion_container">
+														<div class="accordion d-flex flex-row align-items-center active"><div>Qual o Grupo Alvo?</div></div>
+														<div class="accordion_panel">
+															<p>Este evento foca a sua atenção para o público geral</p>
+														</div>
+													</div>
+
+													<div class="accordion_container">
+														<div class="accordion d-flex flex-row align-items-center"><div>O evento é confiável</div></div>
+														<div class="accordion_panel">
+															<p>Na Help2Everyone levamos o voluntariado muito a sério, por isso todas os eventos são criados por organizações legítimas e caso recebamos denúncias sobre o evento, o mesmo pode ser eliminado</p>
+														</div>
+													</div>
+
+													<div class="accordion_container">
+														<div class="accordion d-flex flex-row align-items-center"><div>A Organização criadora é confiável?</div></div>
+														<div class="accordion_panel">
+															<p>Todas as organizações presentes na Help2Everyone são confiáveis e verificadas pessoalmente pelos nossos técnicos, para garantir que não haja enganos, qualquer organização que crie um evento letigioso será severamente punida.</p>
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<!-- Reviews -->
+								<div class="tab_panel tab_panel_3" id="avaliar">
+									<div class="tab_panel_title">Avaliações</div>
+									<!-- Rating -->
+									<div class="review_rating_container">
+										<div class="review_rating">
+											<div class="review_rating_num">4</div>
+											<div class="review_rating_stars">
+												<div class='rating_r rating_r_4'><i></i><i></i><i></i><i></i><i></i></div>
+											</div>
+											<div class="review_rating_text">(20 avaliações)</div>
+										</div>
+										<div class="review_rating_bars">
+											<ul>
+												<li><span>5 Estrelas</span><div class="review_rating_bar" style="max-width:80%;"><div style="width:10%;"></div></div></li>
+												<li><span>4 Estrelas</span><div class="review_rating_bar" style="max-width:80%;"><div style="width:80%;"></div></div></li>
+												<li><span>3 Estrelas</span><div class="review_rating_bar" style="max-width:80%;"><div style="width:0%;"></div></div></li>
+												<li><span>2 Estrelas</span><div class="review_rating_bar" style="max-width:80%;"><div style="width:0%;"></div></div></li>
+												<li><span>1 Estrelas</span><div class="review_rating_bar" style="max-width:80%;"><div style="width:10%;"></div></div></li>
+											</ul>
+										</div>
+									</div>
+									<div class='tab_panel_title'>Avaliar:</div>
+									<div class='row' style='padding-top:15px;'>
+											<a href='#' class='btn btn-info' style='padding-right:5px;padding-left:5px;color:white;'><i class='fa fa-check-square-o'></i></a>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+										</div>
+										<div class='row' style='padding-top:5px;'>
+											<a href='#' class='btn btn-info' style='padding-right:5px;padding-left:5px;color:white;'><i class='fa fa-check-square-o'></i></a>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+										</div>
+										<div class='row' style='padding-top:5px;'>
+											<a href='#' class='btn btn-info' style='padding-right:5px;padding-left:5px;color:white;'><i class='fa fa-check-square-o'></i></a>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+										</div>
+										<div class='row' style='padding-top:5px;'>
+											<a href='#' class='btn btn-info' style='padding-right:5px;padding-left:5px;color:white;'><i class='fa fa-check-square-o'></i></a>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+										</div>
+										<div class='row' style='padding-top:5px;'>
+											<a href='#' class='btn btn-info' style='padding-right:5px;padding-left:5px;color:white;'><i class='fa fa-check-square-o'></i></a>
+											<i class='fa fa-star fa-2x' style='color:gold;padding-left:5px;'></i>
+										</div>
+
+									<!-- Comments -->
+									<div class="comments_container">
+										<ul class="comments_list">
+											<li>
+												<div class='comment_item d-flex flex-row align-items-start jutify-content-start'>
+													<div class='comment_image'><div><img src="{% static 'images/team_2.jpg'%}" alt=''></div></div>
+													<div class='comment_content'>
+														<div class='comment_title_container d-flex flex-row align-items-center justify-content-start'>
+															<div class='comment_author'><a href='Alfredo'>Alf</a></div>
+															<div class='comment_rating'>Alfredo Antunes</div>
+															<div class='comment_time ml-auto'>Há 8 horas</div>
+														</div>
+														<div class='comment_text'>
+															<p>Recomendo o evento</p>
+														</div>
+														<div class='comment_extras d-flex flex-row align-items-center justify-content-start'>
+															<div class='comment_extra comment_likes'><a href="#" title='gosta do comentário'><i class='fa fa-heart' aria-hidden='true'></i><span>1</span></a></div>
+														</div>
+													</div>
+												</div>
+													<ul>
+														<li>
+															<div class='comment_item d-flex flex-row align-items-start jutify-content-start'>
+																<div class='comment_image'><div><img src="{% static 'images/unicef.png'%}" alt=''></div></div>
+																<div class='comment_content'>
+																	<div class='comment_title_container d-flex flex-row align-items-center justify-content-start'>
+																		<div class='comment_author'><a href='#'>Unicef</a></div>
+																		<div class='comment_rating'>geral@unicef.com</div>
+																		<div class='comment_time ml-auto'>Há 4 horas</div>
+																	</div>
+																	<div class='comment_text'>
+																		<p>Obrigado pelo feedback</p>
+																	</div>
+																	<div class='comment_extras d-flex flex-row align-items-center justify-content-start'>
+																		<div class='comment_extra comment_likes'><a href="#" style='color:red' ><i class='fa fa-heart' aria-hidden='true'></i><span>1</span></a></div>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+										</ul>
+										<div class="add_comment_container">
+											<div class="add_comment_title" style="padding-bottom:15px;">Comenta tu também</div>
+											<form>
+												<div class="form-group">
+													<div class="row">
+													<div class="col-md-10" style="padding-top:15px;">
+														<textarea style="resize: none;" type="text" class="form-control" name="descricao" placeholder="Insira o seu comentário" maxlength="500" required></textarea>
+													</div>
+													<div class="col-md-2" style="padding-top:25px;">
+														<button class="form-control btn btn-primary" name="coment" type="submit"><i class="fa fa-share-square-o" style="color:white;"></i></button>
+													</div>
+												</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Course Sidebar -->
+				<div class="col-lg-4">
+					<div class="sidebar">
+
+						<!-- Feature -->
+						<div class="sidebar_section">
+							<div class="sidebar_section_title">Informações do Evento</div>
+							<div class="sidebar_feature">
+								<!--<div class="course_price"><i class='fa fa-money'></i> 10 Helps</div>-->
+									<!--<span class='badge badge-success' style='color:white;background:red;'>Inativo</span>-->
+								
+								<!-- Features -->
+								<div class="feature_list">
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Estado: </span></div>
+										<div class="feature_text ml-auto"><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Duração: </span></div>
+										<div class="feature_text ml-auto">{{event.hours}} H</div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Data de Início:</span></div>
+										<div class="feature_text ml-auto">{{event.startDate}}</div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Data de Fim:</span></div>
+										<div class="feature_text ml-auto">{{event.endDate}}</div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-users" aria-hidden="true"></i><span>Total de Vagas</span></div>
+										<div class="feature_text ml-auto">{{event.totalVoluntarys}}</div>
+									</div>
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<!-- Cor = "color:green"-->
+										<div class="feature_title" style="color:green"><i class="fa fa-users" aria-hidden="true"></i><span>Vagas Disponíveis:</span></div>
+										<div class="feature_text ml-auto" style="color:green">{{vacancy}}</div>
+									</div>
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-marker" aria-hidden="true"></i><span>Pais:</span></div>
+										<div class="feature_text ml-auto" >{{event.country}}</div>
+									</div>
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-marker" aria-hidden="true"></i><span>Código Postal:</span></div>
+										<div class="feature_text ml-auto" >{{event.zipCode}}</div>
+									</div>
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-o" aria-hidden="true"></i><span>Distrito:</span></div>
+										<div class="feature_text ml-auto" >{{event.district}}</div>
+									</div>
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-signs" aria-hidden="true"></i><span>Concelho:</span></div>
+										<div class="feature_text ml-auto" >{{event.county}}</div>
+									</div>
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-signs" aria-hidden="true"></i><span>Freguesia:</span></div>
+										<div class="feature_text ml-auto" >{{event.parish}}</div>
+									</div>
+									<!--<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title" ><i class="fa fa-map-signs" aria-hidden="true"></i><span>Morada:</span></div>
+										<div class="feature_text ml-auto" ><?php echo $Morada_Ev; ?></div>
+									</div>-->
+									<div class="row" style="padding-bottom:20px;">
+										<div class="col-md-4">
+										</div>
+										<div class="col-md-6">
+											<form action="" method="POST">
+												{% csrf_token %}
+											<!--
+												disabled title='Evento Inativo'
+												title='Concorrer ao evento em causa'
+												disabled title='Já aderiu ao evento!'
+												disabled title='Atualize os seus dados primeiro!'
+												disabled title='Sem vagas disponíveis'
+											 -->
+											{% if can_register == 'yes' %}
+												<button class="btn btn-primary" name="participate" type='submit' title='Concorrer ao evento em causa'>Aderir ao evento</button>
+											{% elif can_register %}
+											<button class="btn btn-danger" name="participate" type='submit' title='Anular a candidatura'>Anular participação</button>
+											{% else %}
+												<button class="btn btn-warning" name="participate" type='submit' disabled title='Não é possível concorrer'>Aderir ao evento</button>
+											{% endif %}
+										</form>
+										</div>
+									<div class="col-md-2">
+									</div>
+									<div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Feature
+						<div class='sidebar_section'>
+							<div class='sidebar_section_title'>Organizações</div>
+
+							<div class='sidebar_teacher'>
+								<div class='teacher_title_container d-flex flex-row align-items-center justify-content-start'>
+									<div class='teacher_image'><img src='./Fotos/FotosOrg/".$Foto_org."' alt=''></div>
+									<div class='teacher_title'>
+										<div class='teacher_name'><a href='./course.php?abrir_org=".$Nome_org."'>".$Nome_org." ".$verif."</a></div>
+										<div class='teacher_position'>".$email_org."</div>
+									</div>
+								</div>
+							</div>
+						</div>-->
+
+						<!-- Latest Course 
+						<div class="sidebar_section" style="padding-top:20px;">
+							<div class="sidebar_section_title">Últimos Eventos</div>
+							<div class="sidebar_latest">
+											<div class='latest d-flex flex-row align-items-start justify-content-start'>
+											<div class='latest_image'><div><img src='".$Pic."' alt=''></div></div>
+											<div class='latest_content'>
+											<div class='latest_title'><a href='course.php?abrir=".$identity."'>".$nome."</a></div>
+											<div class='latest_price'>".$Help." Helps</div>
+											</div>
+											</div>-->
+
+								<!-- Latest Course
+								<div class="latest d-flex flex-row align-items-start justify-content-start">
+									<div class="latest_image"><div><img src="images/latest_2.jpg" alt=""></div></div>
+									<div class="latest_content">
+										<div class="latest_title"><a href="course.php">Photography for Beginners Masterclass</a></div>
+										<div class="latest_price">$170</div>
+									</div>
+								</div>
+ 								-->
+								<!--</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	{% endfor %}
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_background" style="background-image:url({% static 'images/footer_background.png' %})"></div>
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a>
+											<div class="footer_logo_text">Help2<span>Everyone</span></div>
+										</a>
+									</div>
+									<div class="footer_about_text">
+										<p>Acompanha novidades através das Redes Sociais</p>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://pt.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contacta-nos</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Morada: Universidade de Aveiro, 3810-193 Aveiro</li>
+											<li>Telefone: 232456765</li>
+											<li>Email: help2everyone@gmail.com</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Navegação</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="{% url 'index' %}">Home</a></li>
+											<li><a href="{% url 'about' %}">Sobre</a></li>
+											<li><a href="{% url 'contact' %}">Contato</a></li>
+											<li><a href="{% url 'events' %}">Eventos</a></li>
+											<li><a href="{% url 'blog' %}">Notícias</a></li>
+											<li><a href="#">Voluntários</a></li>
+											<li><a href="#">Organizações</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class="footer_title">Em breve...</div>
+									<div class="footer_mobile_content">
+										<div class="footer_image"><a><img src="{% static 'images/mobile_1.png' %}" alt=""></a></div>
+										<div class="footer_image"><a><img src="{% static 'images/mobile_2.png' %}" alt=""></a></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Help2Everyone - Todos direitos reservados
+	<!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. --></div>
+						<div class="ml-lg-auto cr_links">
+							<ul class="cr_list">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
+<script src="{% static 'plugins/easing/easing.js'%}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="{% static 'plugins/colorbox/jquery.colorbox-min.js'%}"></script>
+<script src="{% static 'js/course.js'%}"></script>
+</body>
+</html>

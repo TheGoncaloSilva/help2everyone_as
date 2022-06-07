@@ -23,6 +23,7 @@ urlpatterns = [
     path('main/', include('apps.main.urls')),
     path('', include('apps.main.urls')),
     path('login/', include('apps.login.urls')),
+    path('event/', include('apps.event.urls')),
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, 

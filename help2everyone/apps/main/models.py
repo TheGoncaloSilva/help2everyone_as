@@ -3,6 +3,9 @@ import datetime
 from email.policy import default
 from django.db import models
 from django.forms import IntegerField
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 # Create your models here.
 # For the tables to appear in admin, dont forget to alter in admin.py app file
@@ -14,7 +17,6 @@ class Voluntary(models.Model):
     registryDate = models.DateField(default=datetime.date.today)
     phoneNumber = models.IntegerField(default=0)
     ageOfBirth = models.DateField(default=datetime.date.today)
-    password = models.CharField(max_length=300)
 
 
 class Organization(models.Model):
@@ -26,8 +28,6 @@ class Organization(models.Model):
     websiteAddress = models.CharField(max_length=250)
     foundationDate = models.DateField(default=datetime.date.today)
     registryDate = models.DateField(default=datetime.date.today)
-    password = models.TextField(max_length=300)
-
 
 class Event(models.Model):
     eventMainImage = models.ImageField(upload_to = 'events_images', default = 'event-default.png')
@@ -35,15 +35,17 @@ class Event(models.Model):
     shortDescription = models.CharField(max_length=90)
     description = models.CharField(max_length=1000)
     totalVoluntarys = models.IntegerField(default=1)
+    hours = models.IntegerField(default=1)
     address = models.CharField(max_length=200)
-    zipCode = models.CharField(max_length=8)
+    zipCode = models.CharField(max_length=8) # codigo postal
     district = models.CharField(max_length=100) # distrito  
     county = models.CharField(max_length=100) # concelho
     parish = models.CharField(max_length=100) # freguesia
+    country = models.CharField(max_length=100) # pais
     startDate = models.DateField(default=datetime.date.today)
     endDate = models.DateField(default=datetime.date.today)
     idOrganization = models.ForeignKey(Organization, on_delete=models.CASCADE)
 
 class Voluntary_Events(models.Model):
     voluntaryId = models.ForeignKey(Voluntary, on_delete=models.CASCADE)
-    organizationId = models.ForeignKey(Organization, on_delete=models.CASCADE)
+    eventId = models.ForeignKey(Event, on_delete=models.CASCADE)

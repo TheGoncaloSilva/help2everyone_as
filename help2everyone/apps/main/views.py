@@ -1,5 +1,7 @@
-from django.shortcuts import render # Render html code
+from django.shortcuts import redirect, render # Render html code
 from django.http import HttpResponse
+from django.contrib.auth import logout
+from .models import Event
 
 # Create your views here.
 def say_hello(request):
@@ -12,16 +14,41 @@ def test(request):
     return render(request, 'test.html', context)
 
 def index(request):
-    return render(request, 'index.html')
+    if not request.user.is_authenticated:
+        return render(request, 'index.html')
+    else:
+        context = {'authentication' : 'true'}
+        return render(request, 'index.html', context)
 
 def about(request):
-    return render(request, 'about.html')
+    if not request.user.is_authenticated:
+        return render(request, 'about.html')
+    else:
+        context = {'authentication' : 'true'}
+        return render(request, 'about.html', context)
 
 def blog(request):
-    return render(request, 'blog.html')
+    if not request.user.is_authenticated:
+        return render(request, 'blog.html')
+    else:
+        context = {'authentication' : 'true'}
+        return render(request, 'blog.html', context)
 
 def events(request):
-    return render(request, 'events.html')
+    context = {}
+    if request.user.is_authenticated:
+        context = {'authentication' : 'true'}
+    events = Event.objects.all()
+    context.update({'events' : events})
+    return render(request, 'events.html', context)
 
 def contact(request):
-    return render(request, 'contact.html')
+    if not request.user.is_authenticated:
+        return render(request, 'contact.html')
+    else:
+        context = {'authentication' : 'true'}
+        return render(request, 'contact.html', context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')
