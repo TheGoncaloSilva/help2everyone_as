@@ -33,7 +33,7 @@ def loadView(request):
         if Voluntary_Events.objects.filter(voluntaryId=user, eventId = event2).count() == 0:
             context.update({'can_register': 'yes'})
         else: 
-            context.update({'can_register': 'no'})
+            context.update({'can_register': 'cancel'})
             context.update({'messages': 'success', 'message_info': 'Já se encontra inscrito neste evento'})
     else:
         context.update({'can_register': 'no'})
