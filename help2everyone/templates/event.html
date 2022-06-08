@@ -509,7 +509,7 @@
 											 -->
 											{% if can_register == 'yes' %}
 												<button class="btn btn-primary" name="participate" type='submit' title='Concorrer ao evento em causa'>Aderir ao evento</button>
-											{% elif can_register %}
+											{% elif can_register == 'cancel' %}
 											<button class="btn btn-danger" name="participate" type='submit' title='Anular a candidatura'>Anular participação</button>
 											{% else %}
 												<button class="btn btn-warning" name="participate" type='submit' disabled title='Não é possível concorrer'>Aderir ao evento</button>
