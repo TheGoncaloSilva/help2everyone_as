@@ -1,0 +1,249 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="pt">
+
+<!-- Mirrored from tavonline.net/html/mat/default/blog-posts/blog-music-version.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 16:28:05 GMT -->
+<head>
+{% for org in profile_org %}
+<!-- Simple Page Needs
+================================================== -->
+<title>Perfil {{org.orgName}}</title>
+<meta charset="UTF-8">
+<meta name="description" content="Help2Everyone">
+<meta name="keywords" content="Together for a better world">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Favicon
+================================================== -->  
+<link href="{% static 'profile_org/favicon.html'%}" rel="shortcut icon" type="image/x-icon" />
+<link rel="icon" href="{% static 'images/logo.ico'%}">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="{% static 'profile_org/css/bootstrap.css'%}"/>
+<link rel="stylesheet" href="{% static 'profile_org/css/reset.css'%}"/>
+<link rel="stylesheet" href="{% static 'profile_org/cubeportfolio/css/cubeportfolio.min.css'%}"/>
+<link rel="stylesheet" href="{% static 'profile_org/css/style.css'%}"/>
+<link rel="stylesheet" href="{% static 'profile_org/css/colors/color.css'%}" id="color" />
+    
+<!-- Google Web fonts
+================================================== --> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+
+<!-- Font Icons
+================================================== --> 
+<link rel="stylesheet" href="{% static 'profile_org/icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}"/>
+<link rel="stylesheet" href="{% static 'profile_org/icon-fonts/web-design/flaticon.css'%}" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+    
+<!-- Wrapper --> 
+<div class="wrapper top_60 container">
+<div class="row">
+        
+<!-- Profile Section
+================================================== --> 
+<div class="col-lg-3 col-md-4">
+    <div class="profile">
+        <div class="profile-name">
+            <a href="{% url 'index'%}" title="Ir para Home"><i class="fa fa-chevron-left"></i></a>
+            <span class="name">{{org.orgName}}</span><br>
+            <span class="job">Portugal - Organização</span>
+        </div>
+        <figure class="profile-image">
+            <img src="{{org.orgImg.url}}" alt="">
+        </figure> 
+        <ul class="profile-information">
+            <li><img src="{% static 'profile_org/images/glasses.png'%}" alt=""></li>
+            <li><p><span>Email:</span> {{org.email}}</p></li>
+            <li><p><span>Contato:</span> {{org.contactNumber}}</p></li>
+            <li><p><span>Website:</span> <a href="{{org.websiteAddress}}">Clique Aqui</a></p></li>
+            <li><p><span>Fundação:</span> {{org.foundationDate}}</p></li>
+            <li><p><span>Registada:</span> {{org.registryDate}}</p></li>
+            <li><p><span>Avaliação: </span>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star-half-o'></i>
+                <i class='fa fa-star-o'></i> 
+                (3 avaliações)</p></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Page Tab Container Div -->   
+<div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
+
+<!-- Header
+================================================== --> 
+<div class="row">
+    <header class="col-md-12">
+        <nav>
+            <div class="row">
+                <!-- navigation bar -->
+                <div class="col-md-8 col-sm-8 col-xs-4">
+                    <ul class="tabs">
+                        <li class="tab">
+                            <a class="home-btn" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="tab"><a href="#resume">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-8 dynamic">
+                    <a href="mailto:{{org.email}}" class="pull-right site-btn icon hidden-xs">Contacte-nos <i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <div class="hamburger pull-right hidden-lg hidden-md"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    <div class="hidden-md social-icons pull-right"> 
+                        <a class="fb" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                        <a class="tw" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                        <a class="ins" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>   
+<!-- Page Content
+================================================== --> 
+<div id="content" class="panel-container col-md-12">
+  
+    <!-- Home Page
+    ================================================== -->
+    <div id="home">
+        <!-- Text Section -->
+        <div class="row">
+            <section class="about-me line col-md-12 padding_30 padbot_45">
+                <div class="section-title"><span></span><h2>Informação</h2></div>
+                <p class="top_30">
+                    Somos uma organização mundial cujo objectivo é mudar atitudes e comportamentos, para defender o meio ambiente, promover a paz
+                    e sobretudo ajudar as comunidades e todo o tipo de pessoas.
+                </p>
+            </section>
+        </div>
+        <!-- My Services Section -->
+        <div class="row">
+            <section class="services line graybg col-md-12 padding_50 padbot_50">
+                <div class="section-title bottom_45"><span></span><h2>Áreas de Interesse principais</h2></div>
+                    <div class="row">
+                        <div class='col-md-3 col-sm-6 col-xs-12' style='padding-bottom:20px;'>
+                            <div class='service'>
+                                <div class='icon'>
+                                    <i class='fa fa-leaf' style='height: 100%;display: flex;align-items: center;justify-content: center;'></i>
+                                </div>
+                                <span class='title'>Ambiente</span>
+                                <p class='little-text'>Várias atividades a favor do ambiente</p>
+                            </div>
+                            <div class='col-md-3 col-sm-6 col-xs-12' style='padding-bottom:20px;'>
+                                <div class='service'>
+                                    <div class='icon'>
+                                        <i class='fa fa-handshake-o' style='height: 100%;display: flex;align-items: center;justify-content: center;'></i>
+                                    </div>
+                                    <span class='title'>Solidariedade Social</span>
+                                    <p class='little-text'>Várias atividades a favor da Solidariedade Social</p>
+                                </div>
+                            </div>
+                            <div class='col-md-3 col-sm-6 col-xs-12' style='padding-bottom:20px;'>
+                                <div class='service'>
+                                    <div class='icon'>
+                                        <i class='fa fa-mobile' style='height: 100%;display: flex;align-items: center;justify-content: center;'></i>
+                                    </div>
+                                    <span class='title'>Novas Tecnologias</span>
+                                    <p class='little-text'>Várias atividades a favor das TIC</p>
+                                </div>
+                            </div>
+                            <div class='col-md-3 col-sm-6 col-xs-12' style='padding-bottom:20px;'>
+                                <div class='service'>
+                                    <div class='icon'>
+                                        <i class='fa fa-users' style='height: 100%;display: flex;align-items: center;justify-content: center;'></i>
+                                    </div>
+                                    <span class='title'>Cidadania e Direitos</span>
+                                    <p class='little-text'>Várias atividades a favor da Cidadania e do Direito</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Resume Page
+    ================================================== -->
+    <div id="resume">
+        <!-- Resume Section -->
+        <div class="row">
+            <section class="education">
+            <div class="section-title top_30"><span></span><h2>Histórico</h2></div>
+                <div class="row">
+                    <!-- Working History -->
+                    <div class="working-history col-md-6 padding_15 padbot_30">
+                        <ul class="timeline col-md-12 top_30">
+                            <li><i class="fa fa-suitcase" aria-hidden="true"></i><h2 class="timeline-title">Eventos</h2></li>
+                            <li><p style='font-weight:bold;font-size: 16px;'>Acompanhar Idosos</p>
+                                <span>03 de Março de 2019</span>
+                                <p class='little-text'>Os Voluntarios precisam de saber cuidar de Idosos e gostar deles</p>
+                            </li>
+                            <li><p style='font-weight:bold;font-size: 16px;'>Ajudar na Limpeza</p>
+                                <span>18 de Março de 2019</span>
+                                <p class='little-text'>Como tÃªm constatado as ruas da cidade andam bastante sujas</p>
+                            </li>                                
+                        </ul>
+                    </div>
+                    <!-- Education History -->
+                    <div class="education-history col-md-6 padding_15 padbot_30">
+                        <ul class="timeline col-md-12 top_30">
+                            <li><i class="fa fa-road" aria-hidden="true"></i><h2 class="timeline-title">Sobre mim</h2></li>                             
+                            <li><p style='font-weight:bold;font-size: 16px;'>Ensino Superior UniversitÃ¡rio - Licenciaturas</p>
+                                <span>Nasceu: 31 de Dezembro de 2017</span>
+                            </li>
+                            <li><p style='font-weight:bold;font-size: 16px;'>Localizar-me</p>
+                                <span>Viseu , Oliveira de Frades</span>
+                            </li>
+                            <li><p style='font-weight:bold;font-size: 16px;'>Registo</p>
+                                <span>Registou-se a: 01 de Março de 2019</span>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+</div><!-- Content - End -->
+</div> <!-- col-md-12 end -->
+</div><!-- row end -->
+ 
+{% endfor %}
+<!-- Footer
+================================================== --> 
+<footer>
+    <div class="footer col-md-12 top_30 bottom_30">
+        <div class="name col-md-4 hidden-md hidden-sm hidden-xs">Help2everyone</div>
+    </div>
+</footer>
+    
+</div> <!-- Tab Container - End -->
+</div> <!-- Row - End --> 
+</div> <!-- Wrapper - End -->   
+
+<!-- Javascripts
+================================================== -->  
+<script src="{% static 'profile_org/js/jquery-2.1.4.min.js'%}"></script> 
+<script src="{% static 'profile_org/cubeportfolio/js/jquery.cubeportfolio.min.js'%}"></script>
+<script src="{% static 'profile_org/js/bootstrap.min.js'%}"></script> 
+<script src="{% static 'profile_org/js/jquery.easytabs.min.js'%}"></script>
+<script src="{% static 'profile_org/js/main.js'%}"></script>
+<!-- for color alternatives -->
+<script src="{% static 'profile_org/js/jquery.cookie-1.4.1.min.js'%}"></script>
+<script src="{% static 'profile_org/js/subpage-demo.js'%}"></script>
+<link rel="stylesheet" href="{% static 'profile_org/css/Demo.min.css'%}" />
+
+</body>
+
+<!-- Mirrored from tavonline.net/html/mat/default/blog-posts/blog-music-version.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 16:28:05 GMT -->
+</html>

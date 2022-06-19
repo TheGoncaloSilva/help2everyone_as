@@ -73,7 +73,7 @@
 							</div>
 							<nav class="main_nav_contaner ml-auto">
 								<ul class="main_nav">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="{% url 'index' %}">Home</a></li>
 									<li class="nav-item dropdown">
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											Sobre
@@ -92,6 +92,36 @@
 											<a class="dropdown-item" href="#">Organizações</a>
 									</li>
 									<li><a href="{% url 'contact' %}">Contato</a></li>
+
+									{% if session_org %}
+										{% for session_org in session_org%}
+										<li class="nav-item dropdown">
+											<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<img src="{{session_org.orgImg.url}}" class="userimage">
+											</button>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<a class="dropdown-item" href="{% url 'org_profile' %}?org_email={{session_org.email}}">{{session_org.orgName}}</a>
+											<a class="dropdown-item" href="#">Organização</a>
+											<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+											</div>
+
+										</li>
+										{% endfor %}
+										{% elif session_vol %}
+										{% for session_vol in session_vol%}
+										<li class="nav-item dropdown">
+											<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<img src="{{session_vol.profileImg}}" class="userimage">
+											</button>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="{% url 'vol_profile' %}?vol_email={{session_vol.email}}">{{session_vol.firstName}}</a>
+												<a class="dropdown-item" href="#">Voluntário</a>
+												<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+											</div>
+
+										</li>
+										{% endfor %}
+										{% endif %}
 								</ul>
 
 								<!-- Hamburger -->
@@ -216,11 +246,7 @@
 							{% for event in events %}
 								<div class='col-lg-6 course_col'>
 								<div class='course'>
-									{% if event.eventMainImage == 'events_images/apoio_rua.jpg' %}
-										<div class='course_image'><img style='min-width:100%;' src="{% static 'images/apoio_rua.jpg' %}" alt=''></div>
-									{% elif event.eventMainImage == 'events_images/limpeza_praia.png' %}
-										<div class='course_image'><img style='min-width:100%;' src="{% static 'images/limpeza_praia.png' %}" alt=''></div>
-									{% endif %}
+									<div class='course_image'><img style='min-width:100%;' src="{{event.eventMainImage.url}}" alt=''></div>
 									<div class='course_body'>
 										<h4><span class='badge badge-danger' style='color:white;background:green;'>Ativo</span></h4>
 										<h3 class='course_title'><a href="{% url 'event' %}?event_id={{event.id}}">{{event.eventName}}</a></h3>
