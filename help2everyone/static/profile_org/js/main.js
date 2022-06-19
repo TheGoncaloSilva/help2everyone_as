@@ -180,7 +180,7 @@ function Checkfiles(){
     }
 }
 
-$('select').selectpicker();
+//$('select').selectpicker();
 
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
