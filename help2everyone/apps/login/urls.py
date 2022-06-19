@@ -14,7 +14,13 @@ urlpatterns = [
     path('login_vol', views.login_vol , name='login_vol'),
     path('login_vol.html', views.login_vol , name='login_vol'),
 
+    path('register_vol', views.register_vol , name='register_vol'),
+    path('register_vol.html', views.register_vol , name='register_vol'),
+
     path('login_org', views.login_org , name='login_org'),
     path('login_org.html', views.login_org , name='login_org'),
+
+    path('register_org', views.register_org , name='register_org'),
+    path('register_org.html', views.register_org , name='register_org'),
 
 ]
