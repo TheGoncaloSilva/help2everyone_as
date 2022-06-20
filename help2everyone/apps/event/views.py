@@ -9,6 +9,12 @@ def loadView(request):
     context = {}
     if request.user.is_authenticated:
         context = {'authentication' : 'true'}
+        vol = Voluntary.objects.filter(email=request.user)
+        org = Organization.objects.filter(email=request.user)
+        if vol:
+            context.update({'session_vol': vol})
+        if org:
+            context.update({'session_org': org})
     
     event_id = request.GET.get('event_id')
     event = Event.objects.filter(id=event_id)

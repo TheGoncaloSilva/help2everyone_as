@@ -20,7 +20,6 @@
 <link>
 </head>
 <body>
-
 <div class="super_container">
 
 	<!-- Header -->
@@ -94,6 +93,36 @@
 											<a class="dropdown-item" href="#">Organizações</a>
 									</li>
 									<li><a href="{% url 'contact' %}">Contato</a></li>
+
+									{% if session_org %}
+									{% for session_org in session_org%}
+									<li class="nav-item dropdown">
+										<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<img src="{{session_org.orgImg.url}}" class="userimage">
+					 					</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="{% url 'org_profile' %}?org_email={{session_org.email}}">{{session_org.orgName}}</a>
+											<a class="dropdown-item" href="#">Organização</a>
+											<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+											</div>
+
+										</li>
+										{% endfor %}
+										{% elif session_vol %}
+										{% for session_vol in session_vol%}
+										<li class="nav-item dropdown">
+											<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<img src="{{session_vol.profileImg}}" class="userimage">
+											</button>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="{% url 'vol_profile' %}?vol_email={{session_vol.email}}">{{session_vol.firstName}}</a>
+											<a class="dropdown-item" href="#">Voluntário</a>
+											<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+										</div>
+
+									</li>
+									{% endfor %}
+									{% endif %}
 								</ul>
 
 								<!-- Hamburger -->
