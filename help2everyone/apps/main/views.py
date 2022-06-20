@@ -66,9 +66,31 @@ def events(request):
             context.update({'session_vol': vol})
         if org:
             context.update({'session_org': org})
+    if request.method == 'POST':
+        text = request.POST['filtnome']
+        select = request.POST['filt_select']
+        if select == '1':
+            events = Event.objects.filter(eventName=text)
+        elif select == '2':
+            events = Event.objects.filter(country=text)
+        elif select == '3':
+            events = Event.objects.filter(district=text)
+        elif select == '4':
+            events = Event.objects.filter(county=text)
+        elif select == '5':
+            events = Event.objects.filter(parish=text)
+        elif select == '6':
+            events = Event.objects.filter(totalVoluntarys=text)
+        elif select == '7':
+            events = Event.objects.filter(hours=text)
+        else:
+            events = None
 
-    events = Event.objects.all()
-    context.update({'events' : events})
+    else:
+        events = Event.objects.all()
+
+    if events:
+        context.update({'events' : events})
     return render(request, 'events.html', context)
 
 def contact(request):

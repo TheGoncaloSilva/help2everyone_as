@@ -189,6 +189,7 @@
 					<div class="col-lg-8">
 						<div class="container" style="background-color:lightgrey;">
 							<form method="POST" id="courses_search_form" class="form-control" style="background-color:lightgrey;">
+								{% csrf_token %}
 								<div class="row text-center" style="background-color:lightgrey;">
 								<div class="col-md-4" style="padding-top:5px;padding-bottom:5px;">
 									<input type="search" class="form-control" name="filtnome" placeholder="Procurar..." required>
@@ -196,20 +197,16 @@
 								<div class="col-md-4" style="padding-top:5px;padding-bottom:5px;">
 									<select id="courses_search_select" name="filt_select" class="form-control">
 										<option value="1">Nome</option>
-										<option value="2">Id</option>
-										<option value="3">Pais</option>
-										<option value="4">Distrito</option>
-										<option value="5">Concelho</option>
-										<option value="6">Freguesia</option>
-										<option value="7">Nº de Vagas</option>
-										<option value="8">Duracao</option>
-										<option value="9">Idioma</option>
-										<option value="10">Compromisso</option>
-										<option value="11">Grupo Alvo</option>
+										<option value="2">Pais</option>
+										<option value="3">Distrito</option>
+										<option value="4">Concelho</option>
+										<option value="5">Freguesia</option>
+										<option value="6">Nº Voluntários</option>
+										<option value="7">Duracao</option>
 									</select>
 								</div>
 								<div class="col-md-1" style="padding-top:5px;padding-bottom:5px;">
-									<a style="padding-left:10px;" href="#" title="Limpar seleção"><i class="fa fa-refresh fa-2x"></i></a>
+									<a style="padding-left:10px;" href="" title="Limpar seleção"><i class="fa fa-refresh fa-2x"></i></a>
 								</div>
 								<div class="col-md-3" style="padding-top:5px;padding-bottom:5px;">
 									<button action="submit" name="filt" class="btn btn-primary"><i class="fa fa-search"></i> Procurar</button>
@@ -223,7 +220,7 @@
 						<div class="col-md-3">
 							<form>
 								<select hidden name='order1' >
-								  <option value="3" >Desdfdcendente</option>
+								  <option value="3" >Descendente</option>
 								  <option value="4" >Ascendente</option>
 								</select>
 								<noscript><input type="submit" value="Submit"></noscript>
@@ -243,6 +240,7 @@
 						<div class="row courses_row">
 
 							<!-- dynamic posts -->
+							{% if events %}
 							{% for event in events %}
 								<div class='col-lg-6 course_col'>
 								<div class='course'>
@@ -268,6 +266,11 @@
 								</div>
 							</div>
 							{% endfor %}
+							{% else %}
+							<div class='col-lg-6 course_col'>
+								<p>Sem Resultados</p>
+							</div>
+							{% endif %}
 							<!-- end dynamic posts -->
 
 
@@ -327,7 +330,7 @@
 							</div>
 							 End Course 2 -->
 
-							<!-- Course  3 -->
+							<!-- Course  3 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/search_rescue.jpg' %}" alt=''></div>
@@ -353,9 +356,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 3 -->
+							End Course 3 -->
 
-							<!-- Course  4 -->
+							<!-- Course  4 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/limpeza_rio.jpg' %}" alt=''></div>
@@ -383,9 +386,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 4 -->
+							 End Course 4 -->
 
-							<!-- Course  5 -->
+							<!-- Course  5 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/reflorestacao.jpg' %}" alt=''></div>
@@ -412,9 +415,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 5 -->
+							 End Course 5 -->
 
-							<!-- Course  6 -->
+							<!-- Course  6 
 							<div class='col-lg-6 course_col'>
 								<div class='course'>
 									<div class='course_image'><img style='min-width:100%;' src="{% static 'images/banco_alimentar.jpg' %}" alt=''></div>
@@ -442,7 +445,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Course 6 -->
+							 End Course 6 -->
 
 
 						</div>
@@ -461,7 +464,7 @@
 										<div class="courses_show_content">
 											<span>Show: </span>
 											<select id="courses_show_select" class="courses_show_select">
-												<option>6</option>
+												<option></option>
 												<option>12</option>
 												<option>24</option>
 												<option>36</option>

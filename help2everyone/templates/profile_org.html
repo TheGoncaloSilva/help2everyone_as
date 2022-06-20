@@ -238,68 +238,20 @@
             <div id="events">
                 <div class="row" >
                     <section class="contact-form col-md-12 padding_30 padbot_45">
-                        <div class="section-title top_30 bottom_30"><span></span><h2>Gestão Eventos <a disabled title="Todas as Informações que nos fornecer serão guardadas com segurança, sendo esta seção oculta a todos os utilizadores" class="fa fa-question-circle"></a></h2></div>
-                            <div class="row">
-                                <div class="col-md-1" style="margin-top: 5px;border-right: 2px solid lightgrey;">
-                                    <a href='#' class='btn btn-warning'><i class='fa fa-plus'></i></a>
+                        <div class="section-title top_15 bottom_10"><span></span><h2>Criar Evento <a disabled title="Todas as Informações que nos fornecer serão guardadas com segurança, sendo esta seção oculta a todos os utilizadores" class="fa fa-question-circle"></a></h2></div>
+                            <form class="site-form top_30" action="" method="POST" enctype="multipart/form-data" style="font-weight: normal;"> 
+                                {% csrf_token %}
+                                {{form|crispy}}
+
+                                <div class="row">
+                                    <div class="col-md-12 top_15 bottom_30">
+                                        <button class="site-btn" type="submit" name="create_event" value="create">Criar Evento</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-5" style="margin-top: 5px;">
-                                    <form action="#" method="GET">
-                                        <select name='order' class="form-control" onchange='this.form.submit()'>
-                                            <option value="1" selected>Ordenar por: Descendente</option>
-                                            <option value="2" >Ordenar por: Ascendente</option>
-                                        </select>
-                                        <noscript><input type="submit" value="Submit"></noscript>
-                                    </form>
-                                </div>
-                            </div>
+                            </form>
                             <hr/>
                     </div>
                     <div id="grid-container" class="top_60">
-                        <form class="site-form">
-                            <div class="row table-responsive text-center">
-                                <table class="table">
-                                    <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col"><i class="fa fa-cog"></i></th>
-                                        <th scope="col">Id</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col">Nome Evento</th>
-                                        <th scope="col">Total Vagas</th>
-                                        <th scope="col">Vagas</th>
-                                        <th scope="col">Data de Início</th>
-                                        <th scope="col">Data Término</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style='width:145px;'>
-                                                <a style='margin-top:3px;' href='#' class='btn btn-info'>
-                                                    <i class='fa fa-file-o'></i>
-                                                </a> 
-                                                <a style='margin-top:3px;' href='./index.php?sair=21#create' class='btn btn-danger'>
-                                                    <i class='fa fa-sign-out'></i>
-                                                </a> 
-                                                <a style='margin-top:3px;' class='btn btn-success disabled' href='#'>
-                                                    <i class='fa fa-pencil-square-o'></i>
-                                                </a>
-                                            </td>
-                                            <td>21</td>
-                                            <td>
-                                                <span class='badge badge-success' style='color:white;background:red;'>Inativo</span>
-                                            </td>
-                                            <td>Equipa apoio de rua</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>10/03/2019</td>
-                                            <td>16/03/2019</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </div>
-                            </div>
-                            <hr/>
-                        </form>   
                     </section>
                 </div>
             </div>
