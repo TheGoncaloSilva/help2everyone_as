@@ -159,6 +159,41 @@
 					</div>
 				</li>
 				<li class="menu_mm"><a href="{% url 'contact' %}">Contato</a></li>
+				{% if not authentication %}
+					<li class='menu_mm'><a href="{% url 'chooselog' %}">Iniciar Sessão</a></li>
+				{% else %}
+					
+					{% if session_org %}
+					{% for session_org in session_org%}
+					<li class="menu_mm">
+						<a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+							{{session_org.orgName}}
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="{% url 'org_profile' %}?org_email={{session_org.email}}">{{session_org.orgName}}</a>
+							<a class="dropdown-item" href="#">Organização</a>
+							<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+							</div>
+
+						</li>
+						{% endfor %}
+						{% elif session_vol %}
+						{% for session_vol in session_vol%}
+						<li class="menu_mm">
+							<a class='dropdown-toggle' style='color:black' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+								{{session_vol.firstName}}
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="{% url 'vol_profile' %}?vol_email={{session_vol.email}}">{{session_vol.firstName}}</a>
+							<a class="dropdown-item" href="#">Voluntário</a>
+							<a class="dropdown-item" href="{% url 'logout' %}">Logout  <i class="fa fa-sign-out"></i></a>
+						</div>
+
+					</li>
+					{% endfor %}
+					{% endif %}
+
+				{% endif %}
 			</ul>
 		</nav>
 	</div>
