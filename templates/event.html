@@ -286,11 +286,7 @@
 						</div>
 
 						<!-- Course Image -->
-						{% if event.eventMainImage == 'events_images/apoio_rua.jpg' %}
-						<div class="course_image"><img src="{% static 'images/apoio_rua.jpg'%}" style="width:100%;" alt=""></div>
-						{% elif event.eventMainImage == 'events_images/limpeza_praia.png' %}
-						<div class="course_image"><img src="{% static 'images/limpeza_praia.png' %}" style="width:100%;" alt=""></div>
-						{% endif %}
+						<div class="course_image"><img src="{{event.eventMainImage.url}}" style="width:100%;" alt=""></div>
 
 						<!-- Course Tabs -->
 						<div class="course_tabs_container">
