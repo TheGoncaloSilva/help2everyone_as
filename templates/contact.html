@@ -108,7 +108,7 @@
 										{% for session_vol in session_vol%}
 										<li class="nav-item dropdown">
 											<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<img src="{{session_vol.profileImg}}" class="userimage">
+												<img src="{{session_vol.profileImg.url}}" class="userimage">
 											</button>
 											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 											<a class="dropdown-item" href="{% url 'vol_profile' %}?vol_email={{session_vol.email}}">{{session_vol.firstName}}</a>
