@@ -1,0 +1,175 @@
+{
+  "id": "a7d96e4f-f6bb-48b0-8cef-451f0ca597be",
+  "version": "2.0",
+  "name": "Test",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "340e65e3-0bd3-415b-90c6-c93c7f34e322",
+    "name": "TesteAdesao",
+    "commands": [{
+      "id": "ae0c8fa6-6072-43ad-91ab-c5d55850cefc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec71b0d6-e9dc-4acc-9a79-0f7bbff2809a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1848x923",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc10fd54-25f8-4b55-8b29-b7c324100439",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.login_button > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0433dffe-5dca-4672-9952-ef199d2fb7dc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registar ou Entrar",
+      "targets": [
+        ["linkText=Registar ou Entrar", "linkText"],
+        ["css=.login_button > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Registar ou Entrar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login/chooselog.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registar ou Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abc7e339-b813-4419-a6ba-f0617141e80c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(2) > .login100-form-btn",
+      "targets": [
+        ["css=.col-md-6:nth-child(2) > .login100-form-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Voluntário')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login/login_vol.html')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89dde56c-0ffb-4179-9f77-d2849604ff39",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.wrap-input100:nth-child(3) > .input100", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fde321fd-7db2-4737-9ec1-5eae088082bc",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.wrap-input100:nth-child(4) > .input100", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "help"
+    }, {
+      "id": "ecd3c3d7-c29d-4463-9712-8f6b5f7ef47a",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.wrap-input100:nth-child(3) > .input100", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "ruimmachado@ua.pt"
+    }, {
+      "id": "e10c4ae6-7cc2-421b-94bc-7ca7adee2665",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.wrap-input100:nth-child(4) > .input100", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f94f10b-659e-48f0-bb93-68e15ad4da1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login100-form-btn",
+      "targets": [
+        ["css=.login100-form-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b2a9bd-794c-4aeb-ae6e-8a0d5ba9d04b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.main_nav > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/events.html')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40bcd29d-c94c-47e1-9615-9aefe5a131f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Equipa de apoio de rua",
+      "targets": [
+        ["linkText=Equipa de apoio de rua", "linkText"],
+        ["css=.col-lg-6:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Equipa de apoio de rua')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/event/?event_id=1')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Equipa de apoio de rua')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55a9654b-e0b4-4381-9d50-1b0588edb2b4",
+      "comment": "",
+      "command": "click",
+      "target": "name=participate",
+      "targets": [
+        ["name=participate", "name"],
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//button[@name='participate']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aderir ao evento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2d24b807-5cba-43d1-adf4-153d64aa7aef",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["340e65e3-0bd3-415b-90c6-c93c7f34e322"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

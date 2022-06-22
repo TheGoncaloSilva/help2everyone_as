@@ -1,0 +1,143 @@
+{
+  "id": "320b4831-e417-4b55-a496-a125673177d1",
+  "version": "2.0",
+  "name": "Teste",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "76f387d1-b905-4acf-92fb-422202295049",
+    "name": "TestePesquisa",
+    "commands": [{
+      "id": "b31aadbd-53fe-42a6-9586-36d2c522f2ec",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef9c982b-7162-4e9c-b0f1-44c302d87249",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1848x923",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1b8ec5e-1938-446a-8d9d-24c740a3bc96",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.main_nav > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/events.html')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e391a50-91b4-4726-bfa9-363b0210dba3",
+      "comment": "",
+      "command": "click",
+      "target": "name=filtnome",
+      "targets": [
+        ["name=filtnome", "name"],
+        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='filtnome']", "xpath:attributes"],
+        ["xpath=//form[@id='courses_search_form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9114d91-8c86-44db-8220-5a4b9d0e8ac1",
+      "comment": "",
+      "command": "type",
+      "target": "name=filtnome",
+      "targets": [
+        ["name=filtnome", "name"],
+        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='filtnome']", "xpath:attributes"],
+        ["xpath=//form[@id='courses_search_form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Limpeza de Praia"
+    }, {
+      "id": "805550b1-6451-4426-9045-a194c23a0bc3",
+      "comment": "",
+      "command": "click",
+      "target": "name=filt",
+      "targets": [
+        ["name=filt", "name"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@name='filt']", "xpath:attributes"],
+        ["xpath=//form[@id='courses_search_form']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Procurar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a3fcc2e-35e8-4b59-8ba6-6a8dbb08d61e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Limpeza de Praia",
+      "targets": [
+        ["linkText=Limpeza de Praia", "linkText"],
+        ["css=.course_title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Limpeza de Praia')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/event/?event_id=2')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Limpeza de Praia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9613b220-7bd6-4fce-8495-6bef20fffa5d",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.breadcrumbs > ul",
+      "targets": [
+        ["css=.breadcrumbs > ul", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/div/ul", "xpath:position"]
+      ],
+      "value": "800.5,6.5"
+    }, {
+      "id": "a387c6cd-d1e4-49b0-be14-62206e95f34f",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.breadcrumbs > ul",
+      "targets": [
+        ["css=.breadcrumbs > ul", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/div/ul", "xpath:position"]
+      ],
+      "value": "800.5,6.5"
+    }, {
+      "id": "5bccd86a-51fc-42ec-a642-e4630447c659",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.breadcrumbs > ul",
+      "targets": [
+        ["css=.breadcrumbs > ul", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/div/ul", "xpath:position"]
+      ],
+      "value": "800.5,6.5"
+    }, {
+      "id": "9c28e10f-09eb-40fb-a20d-a03c3f3777d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.breadcrumbs > ul",
+      "targets": [
+        ["css=.breadcrumbs > ul", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/div/ul", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ba1b4234-3398-4853-8962-f2aedc5f6bd5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["76f387d1-b905-4acf-92fb-422202295049"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

@@ -1,0 +1,542 @@
+{
+  "id": "fb2347b1-05dc-40df-8ec5-0ca7ec629f15",
+  "version": "2.0",
+  "name": "Testes",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "80f8e418-7191-47ca-9d9b-65dac61e8ac3",
+    "name": "TestePublicacao",
+    "commands": [{
+      "id": "9c726ffc-545d-4735-b69a-f251f71ffe3e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a11b6224-e567-49e9-8e4d-5b0cb2eca68b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1848x923",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "185a1cd4-20f5-4ad8-8210-68ff17238819",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.login_button > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e747ab4-a748-4bea-8ce9-77d0d2bfb782",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registar ou Entrar",
+      "targets": [
+        ["linkText=Registar ou Entrar", "linkText"],
+        ["css=.login_button > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Registar ou Entrar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login/chooselog.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registar ou Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb152474-655f-4669-bf78-933ff60a621c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .login100-form-btn",
+      "targets": [
+        ["css=.text-center > .login100-form-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Organização')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login/login_org.html')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3b97028-55c7-4379-b5cd-98bc2824b589",
+      "comment": "",
+      "command": "click",
+      "target": "name=Email",
+      "targets": [
+        ["name=Email", "name"],
+        ["css=.wrap-input100:nth-child(3) > .input100", "css:finder"],
+        ["xpath=//input[@name='Email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de3b3ee5-9d98-4614-8648-bc66bf2a1785",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.wrap-input100:nth-child(4) > .input100", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "help2everyone"
+    }, {
+      "id": "4dcc7570-ff86-401e-9cac-cc1af10afa17",
+      "comment": "",
+      "command": "type",
+      "target": "name=Email",
+      "targets": [
+        ["name=Email", "name"],
+        ["css=.wrap-input100:nth-child(3) > .input100", "css:finder"],
+        ["xpath=//input[@name='Email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "general@greenpeace.com"
+    }, {
+      "id": "a5aa75d9-3841-4f8d-8564-11d32c7b4937",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login100-form-btn",
+      "targets": [
+        ["css=.login100-form-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60f8d8a2-5e35-4f65-8a02-0c0c49afcc62",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "713af1bf-a5cb-4f25-a222-858f7698d710",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Greenpeace",
+      "targets": [
+        ["linkText=Greenpeace", "linkText"],
+        ["css=.show > .dropdown-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Greenpeace')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/profiles/org_profile?org_email=general@greenpeace.com')]", "xpath:href"],
+        ["xpath=//li[6]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Greenpeace')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2a042ab-4330-480e-8f4d-a99037ec195d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.col-md-8 > .tabs > .tab:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//div[@id='ajax-tab-container']/div/header/nav/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#events')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de3f9ad-6849-4e8c-ab18-de7916b7ceea",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_eventName",
+      "targets": [
+        ["id=id_eventName", "id"],
+        ["name=eventName", "name"],
+        ["css=#id_eventName", "css:finder"],
+        ["xpath=//input[@id='id_eventName']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_eventName']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f12c055f-ac8a-436a-9020-37526e6ce126",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_eventName",
+      "targets": [
+        ["id=id_eventName", "id"],
+        ["name=eventName", "name"],
+        ["css=#id_eventName", "css:finder"],
+        ["xpath=//input[@id='id_eventName']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_eventName']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Limpeza de Floresta"
+    }, {
+      "id": "752ef138-a6f9-4f0d-8ed9-3fab6f88a8d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_shortDescription",
+      "targets": [
+        ["id=id_shortDescription", "id"],
+        ["name=shortDescription", "name"],
+        ["css=#id_shortDescription", "css:finder"],
+        ["xpath=//input[@id='id_shortDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_shortDescription']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57b19505-d612-491f-b695-f0b39c817c28",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_shortDescription",
+      "targets": [
+        ["id=id_shortDescription", "id"],
+        ["name=shortDescription", "name"],
+        ["css=#id_shortDescription", "css:finder"],
+        ["xpath=//input[@id='id_shortDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_shortDescription']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Limpar a Mata do Buçaco"
+    }, {
+      "id": "3ddae2a8-e688-4e59-84df-75f4ef97cf9d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_description",
+      "targets": [
+        ["id=id_description", "id"],
+        ["name=description", "name"],
+        ["css=#id_description", "css:finder"],
+        ["xpath=//textarea[@id='id_description']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_description']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e5a2ea5-0812-4638-b353-1474d3d5c110",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_description",
+      "targets": [
+        ["id=id_description", "id"],
+        ["name=description", "name"],
+        ["css=#id_description", "css:finder"],
+        ["xpath=//textarea[@id='id_description']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_description']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "No dia 28 de Junho de 2022 vamos organizar uma limpeza da Mata do Buçaco."
+    }, {
+      "id": "db821c58-7cba-4c3e-b3a9-5eb98f99a429",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_totalVoluntarys",
+      "targets": [
+        ["id=id_totalVoluntarys", "id"],
+        ["name=totalVoluntarys", "name"],
+        ["css=#id_totalVoluntarys", "css:finder"],
+        ["xpath=//input[@id='id_totalVoluntarys']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_totalVoluntarys']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b6816b1-b07b-436e-b664-06cd13446270",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_totalVoluntarys",
+      "targets": [
+        ["id=id_totalVoluntarys", "id"],
+        ["name=totalVoluntarys", "name"],
+        ["css=#id_totalVoluntarys", "css:finder"],
+        ["xpath=//input[@id='id_totalVoluntarys']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_totalVoluntarys']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "60"
+    }, {
+      "id": "5c717951-0c08-4187-a7f6-1670e16ef35f",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_hours",
+      "targets": [
+        ["id=id_hours", "id"],
+        ["name=hours", "name"],
+        ["css=#id_hours", "css:finder"],
+        ["xpath=//input[@id='id_hours']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_hours']/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6def5d8c-55f2-4b22-9ed7-6ba45ee8e088",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_hours",
+      "targets": [
+        ["id=id_hours", "id"],
+        ["name=hours", "name"],
+        ["css=#id_hours", "css:finder"],
+        ["xpath=//input[@id='id_hours']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_hours']/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "b8d05610-9da4-444c-a7d5-fd8eeea5116e",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_address",
+      "targets": [
+        ["id=id_address", "id"],
+        ["name=address", "name"],
+        ["css=#id_address", "css:finder"],
+        ["xpath=//input[@id='id_address']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_address']/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e84b1f09-9f35-46e0-9295-94080f7c4255",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_address",
+      "targets": [
+        ["id=id_address", "id"],
+        ["name=address", "name"],
+        ["css=#id_address", "css:finder"],
+        ["xpath=//input[@id='id_address']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_address']/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "Mata do Buçaco, 22"
+    }, {
+      "id": "9a7f7a25-96ce-44f8-a91e-7c7a3b21b179",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_zipCode",
+      "targets": [
+        ["id=id_zipCode", "id"],
+        ["name=zipCode", "name"],
+        ["css=#id_zipCode", "css:finder"],
+        ["xpath=//input[@id='id_zipCode']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_zipCode']/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df5bc5f6-6947-4e84-923b-0515f960b43d",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_zipCode",
+      "targets": [
+        ["id=id_zipCode", "id"],
+        ["name=zipCode", "name"],
+        ["css=#id_zipCode", "css:finder"],
+        ["xpath=//input[@id='id_zipCode']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_zipCode']/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "3450-123"
+    }, {
+      "id": "a73da61a-0018-46f8-be21-f042bf40de26",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_district",
+      "targets": [
+        ["id=id_district", "id"],
+        ["name=district", "name"],
+        ["css=#id_district", "css:finder"],
+        ["xpath=//input[@id='id_district']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_district']/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "768fb078-0310-40d0-abb2-b1f8850f2e59",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_district",
+      "targets": [
+        ["id=id_district", "id"],
+        ["name=district", "name"],
+        ["css=#id_district", "css:finder"],
+        ["xpath=//input[@id='id_district']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_district']/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "Aveiro"
+    }, {
+      "id": "cf09d2ab-48b3-4ad5-ac4d-3fb928a61b70",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_county",
+      "targets": [
+        ["id=id_county", "id"],
+        ["name=county", "name"],
+        ["css=#id_county", "css:finder"],
+        ["xpath=//input[@id='id_county']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_county']/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe181692-d17b-4022-b09d-ce98601afdb2",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_county",
+      "targets": [
+        ["id=id_county", "id"],
+        ["name=county", "name"],
+        ["css=#id_county", "css:finder"],
+        ["xpath=//input[@id='id_county']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_county']/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "Mealhada"
+    }, {
+      "id": "7cb770e4-2ea0-4029-b609-4d1dd893f12d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_parish",
+      "targets": [
+        ["id=id_parish", "id"],
+        ["name=parish", "name"],
+        ["css=#id_parish", "css:finder"],
+        ["xpath=//input[@id='id_parish']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_parish']/input", "xpath:idRelative"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "953184a3-4c85-473b-aba0-78535bf47c02",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_parish",
+      "targets": [
+        ["id=id_parish", "id"],
+        ["name=parish", "name"],
+        ["css=#id_parish", "css:finder"],
+        ["xpath=//input[@id='id_parish']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_parish']/input", "xpath:idRelative"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "Buçaco"
+    }, {
+      "id": "10e89d32-0fa9-4e0c-adfb-e1c196417e74",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_country",
+      "targets": [
+        ["id=id_country", "id"],
+        ["name=country", "name"],
+        ["css=#id_country", "css:finder"],
+        ["xpath=//input[@id='id_country']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_country']/input", "xpath:idRelative"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60fb4958-6aee-4f03-a9d0-fb812d15956e",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_country",
+      "targets": [
+        ["id=id_country", "id"],
+        ["name=country", "name"],
+        ["css=#id_country", "css:finder"],
+        ["xpath=//input[@id='id_country']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_country']/input", "xpath:idRelative"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": "Portugal"
+    }, {
+      "id": "ef466c82-c1e0-49cd-b005-0ed3a6bfc2ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_startDate",
+      "targets": [
+        ["id=id_startDate", "id"],
+        ["name=startDate", "name"],
+        ["css=#id_startDate", "css:finder"],
+        ["xpath=//input[@id='id_startDate']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_startDate']/input", "xpath:idRelative"],
+        ["xpath=//div[13]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "357e9c5f-f28c-4b59-ae47-3090fdcdc3c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_startDate",
+      "targets": [
+        ["id=id_startDate", "id"],
+        ["name=startDate", "name"],
+        ["css=#id_startDate", "css:finder"],
+        ["xpath=//input[@id='id_startDate']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_startDate']/input", "xpath:idRelative"],
+        ["xpath=//div[13]/input", "xpath:position"]
+      ],
+      "value": "2022-06-28"
+    }, {
+      "id": "b998ed59-fcd5-4e03-923b-fc8f0513930d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_endDate",
+      "targets": [
+        ["id=id_endDate", "id"],
+        ["name=endDate", "name"],
+        ["css=#id_endDate", "css:finder"],
+        ["xpath=//input[@id='id_endDate']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_endDate']/input", "xpath:idRelative"],
+        ["xpath=//div[14]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d8d5948-b98b-4dcc-85ef-3bd38d615e25",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_endDate",
+      "targets": [
+        ["id=id_endDate", "id"],
+        ["name=endDate", "name"],
+        ["css=#id_endDate", "css:finder"],
+        ["xpath=//input[@id='id_endDate']", "xpath:attributes"],
+        ["xpath=//div[@id='div_id_endDate']/input", "xpath:idRelative"],
+        ["xpath=//div[14]/input", "xpath:position"]
+      ],
+      "value": "2022-06-28"
+    }, {
+      "id": "d3faee8c-a215-4bd4-b32c-aa12751fbcb2",
+      "comment": "",
+      "command": "click",
+      "target": "name=create_event",
+      "targets": [
+        ["name=create_event", "name"],
+        ["css=.col-md-12 > .site-btn", "css:finder"],
+        ["xpath=//button[@name='create_event']", "xpath:attributes"],
+        ["xpath=//div[@id='events']/div/section/form/div[15]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Criar Evento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7cd32297-00da-4220-b8e3-c8e478cfc0cf",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["80f8e418-7191-47ca-9d9b-65dac61e8ac3"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}
