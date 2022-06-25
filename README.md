@@ -28,3 +28,7 @@ The online hosted version can be seen here: https://help2everyone.herokuapp.com/
 client-> User: goncalolsilva@ua.pt, Password: help2everyone
 
 Organization-> User: general@greenpeace.com, Password: help2everyone
+
+# Outros
+
+Sistema de gestão de backlog e repositório do código, em https://github.com/TheGoncaloSilva/help2everyone_as
