@@ -22,3 +22,9 @@ University project developed for System Analysis class
 # Try-it
 
 The online hosted version can be seen here: https://help2everyone.herokuapp.com/
+
+# test-accounts
+
+client-> User: goncalolsilva@ua.pt, Password: help2everyone
+
+Organization-> User: general@greenpeace.com, Password: help2everyone
